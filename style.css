@@ -1,110 +1,88 @@
+/* General Reset */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #fefefe;
-  color: #222;
+  background-color: #fff;
+  color: #1a1a1a;
   line-height: 1.6;
 }
 
 header {
-  background: #003049;
-  color: white;
-  padding: 1rem 0;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 10px 20px;
   text-align: center;
 }
 
 .logo {
-  max-width: 100px;
-  margin-bottom: 0.5rem;
+  width: 150px;
+  height: auto;
+  margin: 10px auto;
 }
 
-.container {
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#hero {
-  background: linear-gradient(to right, #005f73, #0a9396);
-  color: white;
-  padding: 3rem 0;
+/* Hero Section */
+.hero {
   text-align: center;
+  padding: 50px 20px;
+  background-color: #f4f4f4;
 }
 
-.btn-whatsapp {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background: #25d366;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
+.hero h1 {
+  font-size: 2em;
+  color: #1a1a1a;
 }
 
+.hero p {
+  font-size: 1.1em;
+  max-width: 700px;
+  margin: 10px auto 0;
+}
+
+/* Sections */
 section {
-  margin: 2rem 0;
-  padding: 1rem 0;
+  padding: 40px 20px;
 }
 
+section h2 {
+  font-size: 1.8em;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Footer */
 footer {
-  background: #222;
-  color: white;
+  background-color: #1a1a1a;
+  color: #fff;
   text-align: center;
-  padding: 1rem 0;
-  font-size: 0.9rem;
+  padding: 20px 10px;
 }
 
-.sticky-contact-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  border-top: 1px solid #ddd;
-  display: flex;
-  justify-content: space-around;
-  padding: 0.6rem 0;
-  z-index: 1000;
+.footer-logo {
+  width: 40px;
+  margin: 10px 5px;
 }
 
-.sticky-contact-bar a svg {
-  width: 26px;
-  height: 26px;
-  fill: currentColor;
-}
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+  .logo {
+    width: 100px; /* Smaller logo for desktop */
+  }
 
-.sticky-contact-bar .whatsapp:hover {
-  color: #25D366;
-}
+  .footer-logo {
+    width: 30px; /* Smaller social icons for desktop */
+  }
 
-.sticky-contact-bar .instagram:hover {
-  color: #E1306C;
-}
+  .hero h1 {
+    font-size: 2.5em;
+  }
 
-.sticky-contact-bar .linkedin:hover {
-  color: #0077B5;
-}
+  .hero p {
+    font-size: 1.2em;
+  }
 
-/* Only show sticky contact on mobile */
-@media screen and (min-width: 640px) {
-  .sticky-contact-bar {
-    display: none;
+  section {
+    padding: 60px 80px;
   }
 }
