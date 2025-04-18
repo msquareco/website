@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap');
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f4f4;
-  color: #333;
+  font-family: 'Lora', serif;
+  background: #f5f5f3;
+  color: #2c2c2c;
   line-height: 1.6;
 }
 
 header {
-  background: #004c6d;
+  background: #1c2b36;
   color: white;
   padding: 1rem 0;
   text-align: center;
@@ -33,10 +35,15 @@ nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #e0c097;
 }
 
 #hero {
-  background: linear-gradient(to right, #0077b6, #00b4d8);
+  background: linear-gradient(to right, #264653, #2a9d8f);
   color: white;
   padding: 3rem 0;
   text-align: center;
@@ -51,6 +58,11 @@ nav ul li a {
   text-decoration: none;
   border-radius: 30px;
   font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebf5a;
 }
 
 section {
@@ -58,31 +70,15 @@ section {
   padding: 1rem 0;
 }
 
+section h3 {
+  color: #1c2b36;
+  font-weight: 600;
+}
+
 footer {
-  background: #222;
+  background: #1c1c1c;
   color: white;
   text-align: center;
   padding: 1rem 0;
   font-size: 0.9rem;
-}
-/* === Logo & Branding Additions === */
-.branding {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  padding-bottom: 0.5rem;
-}
-
-.logo {
-  height: 60px;
-  width: auto;
-}
-
-.tagline {
-  font-style: italic;
-  color: #d1e9f1;
-  font-size: 0.9rem;
-  margin-top: 0.25rem;
 }
