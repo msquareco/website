@@ -65,3 +65,24 @@ footer {
   padding: 1rem 0;
   font-size: 0.9rem;
 }
+/* === Logo & Branding Additions === */
+.branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding-bottom: 0.5rem;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.tagline {
+  font-style: italic;
+  color: #d1e9f1;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
