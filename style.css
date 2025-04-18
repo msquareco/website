@@ -138,3 +138,78 @@ footer {
   font-size: 1rem;
   margin-bottom: 1rem;
 }
+/* Real Talk Bubble */
+#realTalkBubble {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #004c6d;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+#realTalkBubble:hover {
+  background: #00688b;
+}
+
+/* Real Talk Panel */
+#realTalkPanel {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  display: none;
+  flex-direction: column;
+  z-index: 1000;
+  overflow: auto;
+}
+
+.real-talk-header {
+  background: #004c6d;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.real-talk-header .close-btn {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.real-talk-content {
+  padding: 15px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.real-talk-content ul {
+  padding-left: 18px;
+  margin-top: 10px;
+}
+
+.real-talk-content a.btn-whatsapp {
+  display: inline-block;
+  margin-top: 10px;
+  background: #25D366;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
