@@ -1,82 +1,80 @@
 body {
-  margin: 0;
   font-family: 'Georgia', serif;
-  background-color: #faf9f7;
-  color: #2a2a2a;
+  background-color: #f8f6f3;
+  color: #2f2f2f;
+  margin: 0;
+  padding: 20px;
 }
 
-header {
-  text-align: center;
-  padding: 40px 20px 20px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
-}
-
-header h1 {
+.section-heading {
   font-size: 2rem;
+  text-align: center;
   margin-bottom: 10px;
 }
 
-header .subtitle {
-  font-size: 1rem;
-  color: #777;
+.tagline {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 30px;
+  color: #666;
 }
 
-.button-container {
+/* Back to homepage */
+.back-home {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #e0e0e0;
+  color: #333;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+/* Toggle Buttons */
+.toggle-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
-  padding: 40px 20px 20px;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
 .toggle-button {
-  background-color: #f3f1ee;
-  color: #2a2a2a;
-  border: 1px solid #ccc;
   padding: 12px 24px;
-  border-radius: 25px;
-  font-size: 0.95rem;
+  border-radius: 30px;
+  background-color: #2f2f2f;
+  color: #fff;
+  border: none;
   cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .toggle-button:hover {
-  background-color: #eae7e2;
-  transform: translateY(-2px);
+  background-color: #000;
 }
 
-#pdf-viewer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 20px;
-}
-
+/* PDF Viewer Canvas */
 #pdf-viewer canvas {
-  margin-bottom: 20px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  border-radius: 10px;
-  background-color: #fff;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 40px;
 }
 
-footer {
-  text-align: center;
-  padding: 40px 20px;
-  color: #aaa;
-  font-size: 0.875rem;
-}
-
+/* Inline CTA */
 .inline-cta {
   display: inline-block;
   margin: 40px auto;
-  background-color: #292826;
+  padding: 14px 28px;
+  background-color: #2f2f2f;
   color: #fff;
-  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 500;
   border-radius: 30px;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
   transition: background-color 0.3s ease;
 }
 
@@ -84,19 +82,23 @@ footer {
   background-color: #000;
 }
 
-.floating-whatsapp {
+/* Floating WhatsApp */
+.whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #25d366;
-  color: white;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 28px;
-  line-height: 52px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 1000;
+  background: #2e2e2e;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
   text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: background 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background: #000;
 }
