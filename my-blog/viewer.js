@@ -5,37 +5,35 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs
 const viewer = document.getElementById('pdf-viewer');
 const buttons = document.querySelectorAll('.toggle-button');
 
-function loadPDF(url) {
-  viewer.innerHTML = ''; // Clear previous content
+async function loadPDF(url) {
+  viewer.innerHTML = ''; // Clear existing pages
 
-  pdfjsLib.getDocument(url).promise.then(pdf => {
-    for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-      pdf.getPage(pageNum).then(page => {
-        const canvas = document.createElement("canvas");
-        const context = canvas.getContext('2d');
+  const pdf = await pdfjsLib.getDocument(url).promise;
 
-        const scale = 1.5;
-        const viewport = page.getViewport({ scale: scale });
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
+  for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+    const page = await pdf.getPage(pageNum);
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext('2d');
 
-        const renderContext = {
-          canvasContext: context,
-          viewport: viewport
-        };
+    const scale = 1.5;
+    const viewport = page.getViewport({ scale });
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
 
-        page.render(renderContext).promise.then(() => {
-          viewer.appendChild(canvas);
-        });
-      });
-    }
-  });
+    const renderContext = {
+      canvasContext: context,
+      viewport: viewport
+    };
+
+    await page.render(renderContext).promise;
+    viewer.appendChild(canvas);
+  }
 }
 
-// Load first PDF by default
+// Load first PDF initially
 loadPDF(buttons[0].getAttribute('data-pdf'));
 
-// Toggle logic
+// Toggle functionality
 buttons.forEach(button => {
   button.addEventListener('click', () => {
     buttons.forEach(btn => btn.classList.remove('active'));
