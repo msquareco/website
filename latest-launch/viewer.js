@@ -7,29 +7,42 @@ buttons.forEach(button => {
   button.addEventListener("click", () => {
     const file = button.getAttribute("data-pdf");
     const url = `pdf/${file}`;
-
-    viewer.innerHTML = ""; // Clear previous
+    viewer.innerHTML = "";
 
     pdfjsLib.getDocument(url).promise.then(pdf => {
-      for (let i = 1; i <= pdf.numPages; i++) {
-        pdf.getPage(i).then(page => {
+      const renderPage = (pageNum) => {
+        pdf.getPage(pageNum).then(page => {
           const canvas = document.createElement("canvas");
           const context = canvas.getContext("2d");
-          const scale = 1.5;
-          const viewport = page.getViewport({ scale });
 
-          canvas.height = viewport.height;
-          canvas.width = viewport.width;
+          const fixedWidth = 800;
+          const viewport = page.getViewport({ scale: 1 });
+          const scale = fixedWidth / viewport.width;
+          const scaledViewport = page.getViewport({ scale });
+
+          canvas.width = scaledViewport.width;
+          canvas.height = scaledViewport.height;
 
           page.render({
             canvasContext: context,
-            viewport: viewport
+            viewport: scaledViewport
           }).promise.then(() => {
             viewer.appendChild(canvas);
+            if (pageNum < pdf.numPages) {
+              renderPage(pageNum + 1);
+            } else {
+              const cta = document.createElement("a");
+              cta.href = `https://wa.me/971567570905?text=I'm%20interested%20in%20the%20project:%20${encodeURIComponent(file)}`;
+              cta.target = "_blank";
+              cta.className = "inline-cta";
+              cta.innerHTML = "📩 Connect on WhatsApp";
+              viewer.appendChild(cta);
+            }
           });
         });
-      }
+      };
+
+      renderPage(1);
     });
   });
 });
-
