@@ -43,3 +43,11 @@ document.querySelectorAll(".launch-btn").forEach(button => {
     renderPDF(file, title);
   });
 });
+// Show/hide scroll to top button
+window.onscroll = function () {
+  document.getElementById("topBtn").style.display = window.scrollY > 100 ? "block" : "none";
+};
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
