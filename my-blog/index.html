@@ -7,8 +7,8 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      background-color: #f9f9f9;
-      color: #222;
+      background-color: #f5f0eb;
+      color: #3a3a3a;
       padding: 40px;
       text-align: center;
     }
@@ -16,13 +16,13 @@
     h1 {
       margin-bottom: 10px;
       font-size: 28px;
-      color: #003566;
+      color: #2f2f2f;
     }
 
     p {
       font-style: italic;
       margin-bottom: 30px;
-      color: #555;
+      color: #6b6b6b;
     }
 
     .toggle-buttons {
@@ -36,17 +36,23 @@
     .toggle-button {
       padding: 12px 22px;
       border-radius: 30px;
-      border: 2px solid #003566;
-      background: white;
-      color: #003566;
+      border: 2px solid #c1a36e;
+      background: #fffaf2;
+      color: #856d3d;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    }
+
+    .toggle-button:hover {
+      background-color: #f3e6d4;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
     }
 
     .toggle-button.active {
-      background: linear-gradient(135deg, #003566, #ffd700);
+      background: linear-gradient(145deg, #e6d3b3, #c1a36e);
       color: white;
       border: none;
       box-shadow: 0 4px 14px rgba(0,0,0,0.15);
@@ -60,8 +66,28 @@
 
     #pdf-viewer canvas {
       margin-bottom: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
       border-radius: 8px;
+    }
+
+    #back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #c1a36e;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 25px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: none;
+      transition: background 0.3s;
+    }
+
+    #back-to-top:hover {
+      background-color: #a38655;
     }
   </style>
 </head>
@@ -76,6 +102,8 @@
   </div>
 
   <div id="pdf-viewer"></div>
+
+  <button id="back-to-top">↑ Top</button>
 
   <!-- PDF.js Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
