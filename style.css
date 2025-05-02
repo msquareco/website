@@ -10,26 +10,47 @@ body {
   line-height: 1.6;
   background: #f4f4f4;
   color: #333;
+  font-size: 16px;
   padding-bottom: 50px;
+}
+
+/* Header and Branding */
+.site-header {
+  background: #004c6d;
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.branding h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.branding .tagline {
+  font-size: 0.95rem;
+  color: #d0e9f4;
+  font-weight: normal;
 }
 
 /* Navigation */
 nav {
-  background: #004c6d;
-  padding: 1rem 0;
+  margin-top: 1rem;
 }
 
 .nav-list {
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 2rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .nav-list a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 0.95rem;
 }
 
 .nav-list a:hover {
@@ -38,28 +59,28 @@ nav {
 
 /* Sections */
 section {
-  padding: 4rem 2rem;
-  max-width: 1000px;
+  padding: 3rem 1.5rem;
+  max-width: 900px;
   margin: auto;
 }
 
-h1 {
-  font-size: 2.5rem;
+h2, h3 {
   color: #004c6d;
   margin-bottom: 1rem;
   text-align: center;
 }
 
 h2 {
-  font-size: 2rem;
-  color: #004c6d;
-  margin-bottom: 1rem;
-  text-align: center;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.3rem;
 }
 
 p {
   margin-bottom: 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -67,23 +88,24 @@ ul {
   list-style-type: disc;
   margin-left: 2rem;
   margin-top: 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
+/* Buttons */
 .btn-whatsapp {
   display: inline-block;
   background-color: #25D366;
   color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
   text-decoration: none;
   font-weight: bold;
   margin-top: 1rem;
-  transition: opacity 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 .btn-whatsapp:hover {
-  opacity: 0.8;
+  background-color: #1ebc5e;
 }
 
 /* Footer */
@@ -92,40 +114,44 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
-  position: relative;
+  font-size: 0.9rem;
 }
 
 footer a {
-  color: #ddd;
+  color: #ccc;
   text-decoration: none;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
 
-/* Responsive Design */
-@media (max-width: 767px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
+/* Responsive */
+@media (max-width: 768px) {
   .nav-list {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
   }
 
-  section {
-    padding: 2rem 1rem;
+  h2 {
+    font-size: 1.3rem;
   }
 
-  ul {
-    margin-left: 1rem;
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  .branding h1 {
+    font-size: 1.4rem;
+  }
+
+  .branding .tagline {
+    font-size: 0.85rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
   }
 }
