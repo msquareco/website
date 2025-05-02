@@ -20,10 +20,19 @@ header {
   border-bottom: 1px solid #e2dfda;
 }
 
+.branding {
+  background-color: #f0f0f0;  /* Light background behind logo */
+  padding: 10px 20px;         /* Padding for some spacing */
+  display: inline-block;
+  border-radius: 10px;        /* Rounded corners for elegance */
+}
+
 .branding .logo {
   max-height: 80px;
   height: auto;
   width: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 main {
