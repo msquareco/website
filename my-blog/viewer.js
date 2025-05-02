@@ -1,6 +1,6 @@
 const url = 'pdf/DXB RE Investment Forecast 2025.pdf'; // Update this for different blogs
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = 'pdfjs/pdf.worker.js';
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
 
 const loadingTask = pdfjsLib.getDocument(url);
 loadingTask.promise.then(pdf => {
