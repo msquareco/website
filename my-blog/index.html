@@ -4,17 +4,64 @@
   <meta charset="UTF-8">
   <title>Dubai Real Estate Blog</title>
   <style>
-    body { font-family: Arial; margin: 20px; }
-    #pdf-viewer canvas { margin-bottom: 20px; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+
+    .toggle-buttons {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .toggle-button {
+      padding: 10px 20px;
+      border-radius: 25px;
+      border: 2px solid #0077b6;
+      background: white;
+      color: #0077b6;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .toggle-button.active {
+      background: #0077b6;
+      color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    #pdf-viewer canvas {
+      margin-bottom: 20px;
+      display: block;
+    }
   </style>
 </head>
 <body>
-  <h1>Dubai Real Estate Investment Forecast 2025</h1>
-  <p><em>Forecasting the smart money moves in Dubai's maturing real estate sector for 2025. Key growth indicators, sectors to watch, and strategic risks.</em></p>
+  <h1>Dubai Real Estate Investment Blogs - 2025</h1>
+  <p>Select a blog to view its detailed forecast and analysis.</p>
+
+  <div class="toggle-buttons">
+    <button class="toggle-button active" data-pdf="pdf/DXB RE Investment Forecast 2025.pdf">Dubai Forecast 2025</button>
+    <button class="toggle-button" data-pdf="pdf/Top 5 Emerging Neighborhoods in Dubai.pdf">DXB Top Neighborhoods</button>
+    <button class="toggle-button" data-pdf="pdf/How Dubai's Real Estate Market Stands Out for Global Investors in 2025.pdf">Dubai Stands Out</button>
+  </div>
 
   <div id="pdf-viewer"></div>
 
-  <!-- Include pdf.js from CDN -->
+  <!-- Include pdf.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
   <script src="viewer.js"></script>
 </body>
