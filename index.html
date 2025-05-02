@@ -1,84 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Dubai Real Estate Blog</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: #f9f9f9;
-      color: #222;
-      padding: 40px;
-      text-align: center;
-    }
-
-    h1 {
-      margin-bottom: 10px;
-      font-size: 28px;
-      color: #003566;
-    }
-
-    p {
-      font-style: italic;
-      margin-bottom: 30px;
-      color: #555;
-    }
-
-    .toggle-buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-bottom: 40px;
-    }
-
-    .toggle-button {
-      padding: 12px 22px;
-      border-radius: 30px;
-      border: 2px solid #003566;
-      background: white;
-      color: #003566;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.08);
-    }
-
-    .toggle-button.active {
-      background: linear-gradient(135deg, #003566, #ffd700);
-      color: white;
-      border: none;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-    }
-
-    #pdf-viewer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    #pdf-viewer canvas {
-      margin-bottom: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      border-radius: 8px;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MSQUARECO</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <h1>Dubai Real Estate Investment Blogs - 2025</h1>
-  <p>Select a blog to view its insights and forecasts</p>
+  <header>
+    <div class="branding">
+      <h1 class="brand-text">MSQUARECO <span class="since">Since 2016</span></h1>
+    </div>
+  </header>
 
-  <div class="toggle-buttons">
-    <button class="toggle-button active" data-pdf="pdf/DXB RE Investment Forecast 2025.pdf">Investment Forecast</button>
-    <button class="toggle-button" data-pdf="pdf/Top 5 Emerging Neighborhoods in Dubai.pdf">Top Neighborhoods</button>
-    <button class="toggle-button" data-pdf="pdf/How Dubai's Real Estate Market Stands Out for Global Investors in 2025.pdf">Global Investors</button>
-  </div>
+  <main>
+    <section class="hero">
+      <h1>Timeless Real Estate Investments</h1>
+      <p class="tagline">Discover, Decode, and Deliver Dubai's Best</p>
+      <a href="https://msquareco.github.io/Dubai-decode/" class="cta-button">Decode Dubai</a>
+      <a href="https://msquareco.github.io/dubai_insight/" class="secondary-button">Explore Insights</a>
+    </section>
 
-  <div id="pdf-viewer"></div>
+    <section class="context">
+      <h2>About This Platform</h2>
+      <p>
+        This page connects our entire Dubai real estate experience in one place.
+        Explore in-depth insights, decode real estate with our free advisory, and
+        stay connected with everything MSQUARECO stands for.
+      </p>
+    </section>
+  </main>
 
-  <!-- PDF.js Library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
-  <script src="viewer.js"></script>
+  <footer>
+    &copy; 2025 MSQUARECO. All rights reserved.
+  </footer>
 </body>
 </html>
