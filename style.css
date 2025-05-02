@@ -21,18 +21,22 @@ header {
 }
 
 .branding {
-  background-color: #333333;  /* Darker background for the logo */
-  padding: 10px 20px;          /* Padding for spacing */
   display: inline-block;
-  border-radius: 10px;         /* Rounded corners for elegance */
 }
 
-.branding .logo {
-  max-height: 120px;           /* Adjusted to a larger max height */
-  width: auto;                 /* Maintain aspect ratio */
-  height: auto;
-  display: block;
-  margin: 0 auto;
+.brand-text {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #1a1a1a;
+  letter-spacing: 1px;
+}
+
+.brand-text .since {
+  font-size: 1rem;
+  color: #777;
+  font-style: italic;
+  margin-left: 10px;
 }
 
 main {
@@ -40,12 +44,12 @@ main {
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   margin-bottom: 15px;
 }
 
 .tagline {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #6c6a68;
   margin-bottom: 30px;
 }
@@ -98,18 +102,4 @@ footer {
   margin-top: 60px;
   font-size: 0.9rem;
   color: #9c9c9c;
-}
-.branding h1 {
-  font-family: 'Georgia', serif;
-  font-size: 2.2rem;
-  font-weight: normal;
-  color: #2c2c2c;
-  letter-spacing: 1px;
-}
-
-.branding .since {
-  font-size: 1.1rem;
-  font-style: italic;
-  margin-left: 8px;
-  color: #6c6a68;
 }
