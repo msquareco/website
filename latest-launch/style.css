@@ -1,1 +1,69 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #faf9f7;
+  color: #2a2a2a;
+}
+
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+header .subtitle {
+  font-size: 1rem;
+  color: #777;
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  padding: 40px 20px 20px;
+}
+
+.toggle-button {
+  background-color: #f3f1ee;
+  color: #2a2a2a;
+  border: 1px solid #ccc;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: #eae7e2;
+  transform: translateY(-2px);
+}
+
+#pdf-viewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+#pdf-viewer canvas {
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #aaa;
+  font-size: 0.875rem;
+}
 
