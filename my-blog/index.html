@@ -6,110 +6,150 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: #f5f0eb;
-      color: #3a3a3a;
-      padding: 40px;
-      text-align: center;
+      margin: 20px;
+      background-color: #fdfaf5;
+      color: #333;
     }
 
     h1 {
-      margin-bottom: 10px;
+      text-align: center;
       font-size: 28px;
-      color: #2f2f2f;
+      margin-bottom: 10px;
     }
 
     p {
+      text-align: center;
+      font-size: 16px;
       font-style: italic;
+      color: #555;
       margin-bottom: 30px;
-      color: #6b6b6b;
     }
 
     .toggle-buttons {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
-      gap: 15px;
-      margin-bottom: 40px;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
     }
 
     .toggle-button {
-      padding: 12px 22px;
-      border-radius: 30px;
-      border: 2px solid #c1a36e;
-      background: #fffaf2;
-      color: #856d3d;
+      background: linear-gradient(to right, #f7e9d7, #e0c8a2);
+      border: 1px solid #ccb08a;
+      padding: 12px 20px;
+      border-radius: 25px;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+      color: #5a4735;
     }
 
     .toggle-button:hover {
-      background-color: #f3e6d4;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      background: #ccb08a;
+      color: white;
     }
 
     .toggle-button.active {
-      background: linear-gradient(145deg, #e6d3b3, #c1a36e);
+      background: #b69771;
       color: white;
-      border: none;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-    }
-
-    #pdf-viewer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
     }
 
     #pdf-viewer canvas {
       margin-bottom: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
-      border-radius: 8px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .whatsapp-cta {
+      display: inline-block;
+      margin: 40px auto 60px auto;
+      background: linear-gradient(145deg, #e6d3b3, #c1a36e);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 14px 24px;
+      border-radius: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: background 0.3s ease, transform 0.2s ease;
+      text-align: center;
+      display: block;
+      width: fit-content;
+    }
+
+    .whatsapp-cta:hover {
+      background: #b28f5a;
+      transform: translateY(-2px);
     }
 
     #back-to-top {
       position: fixed;
-      bottom: 30px;
+      bottom: 90px;
       right: 30px;
-      background-color: #c1a36e;
+      background-color: #bfa67c;
       color: white;
-      padding: 12px 18px;
+      padding: 10px 16px;
       border-radius: 25px;
-      font-weight: bold;
       border: none;
+      font-weight: bold;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       display: none;
-      transition: background 0.3s;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
     }
 
     #back-to-top:hover {
-      background-color: #a38655;
+      background-color: #a78d65;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      width: 56px;
+      height: 56px;
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(145deg, #e6d3b3, #c1a36e);
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 24px;
+      line-height: 56px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      background: #b28f5a;
+      transform: scale(1.1);
     }
   </style>
 </head>
 <body>
-  <h1>Dubai Real Estate Investment Blogs - 2025</h1>
-  <p>Select a blog to view its insights and forecasts</p>
+  <h1>Dubai Real Estate Investment Forecast 2025</h1>
+  <p>Forecasting the smart money moves in Dubai's maturing real estate sector for 2025. Key growth indicators, sectors to watch, and strategic risks.</p>
 
   <div class="toggle-buttons">
-  <button class="toggle-button active" data-pdf="pdf/DXB RE Investment Forecast 2025.pdf">Investment Forecast</button>
-  <button class="toggle-button" data-pdf="pdf/Top 5 Emerging Neighborhoods in Dubai.pdf">Top Neighborhoods</button>
-  <button class="toggle-button" data-pdf="pdf/How Dubai's Real Estate Market Stands Out for Global Investors in 2025.pdf">Global Investors</button>
-  <button class="toggle-button" data-pdf="pdf/Dubai Golden Visa.pdf">Golden Visa</button>
-  <button class="toggle-button" data-pdf="pdf/Why 2025.pdf">Why 2025</button>
-  <button class="toggle-button" data-pdf="pdf/Dubai South and Expo City.pdf">Dubai South & Expo</button>
-  <button class="toggle-button" data-pdf="pdf/Luxury vs. Mid-Segment.pdf">Luxury vs. Mid</button>
-  <button class="toggle-button" data-pdf="pdf/Decode Dubai - Key Strategies.pdf">Decode Dubai</button>
-</div>
-
+    <button class="toggle-button active" data-pdf="pdf/DXB RE Investment Forecast 2025.pdf">Investment Forecast</button>
+    <button class="toggle-button" data-pdf="pdf/Top 5 Emerging Neighborhoods in Dubai.pdf">Top Neighborhoods</button>
+    <button class="toggle-button" data-pdf="pdf/How Dubai's Real Estate Market Stands Out for Global Investors in 2025.pdf">Global Investors</button>
+    <button class="toggle-button" data-pdf="pdf/Dubai Golden Visa.pdf">Golden Visa</button>
+    <button class="toggle-button" data-pdf="pdf/Why 2025.pdf">Why 2025</button>
+    <button class="toggle-button" data-pdf="pdf/Dubai South and Expo City.pdf">Dubai South & Expo</button>
+    <button class="toggle-button" data-pdf="pdf/Luxury vs. Mid-Segment.pdf">Luxury vs. Mid</button>
+    <button class="toggle-button" data-pdf="pdf/Decode Dubai - Key Strategies.pdf">Decode Dubai</button>
+  </div>
 
   <div id="pdf-viewer"></div>
 
-  <button id="back-to-top">↑ Top</button>
+  <button id="back-to-top">↑ Back to Top</button>
+
+  <!-- Floating WhatsApp Icon -->
+  <a href="https://wa.me/971567570905?text=Hi, I’m interested in learning more about Dubai real estate." 
+     class="whatsapp-float" target="_blank" aria-label="WhatsApp Chat">💬</a>
 
   <!-- PDF.js Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
