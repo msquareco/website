@@ -1,41 +1,45 @@
-const viewer = document.getElementById('pdf-viewer');
-const buttons = document.querySelectorAll('.toggle-button');
+const viewer = document.getElementById("pdf-viewer");
+const ctaContainer = document.getElementById("cta-container");
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js";
 
-buttons.forEach(button => {
-  button.addEventListener('click', () => {
-    const pdfPath = 'pdf/' + button.getAttribute('data-pdf');
-    viewer.innerHTML = ''; // Clear viewer
+function renderPDF(url, title) {
+  viewer.innerHTML = "";
+  ctaContainer.innerHTML = "";
 
-    pdfjsLib.getDocument(pdfPath).promise.then(pdf => {
-      for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-        pdf.getPage(pageNum).then(page => {
-          const canvas = document.createElement('canvas');
-          const context = canvas.getContext('2d');
-          const scale = 1.5;
-          const viewport = page.getViewport({ scale: scale });
-          canvas.height = viewport.height;
-          canvas.width = viewport.width;
+  pdfjsLib.getDocument(url).promise.then(pdf => {
+    for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+      pdf.getPage(pageNum).then(page => {
+        const canvas = document.createElement("canvas");
+        const context = canvas.getContext("2d");
+        const viewport = page.getViewport({ scale: 1.5 });
 
-          const renderContext = {
-            canvasContext: context,
-            viewport: viewport
-          };
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
 
-          page.render(renderContext).promise.then(() => {
-            viewer.appendChild(canvas);
-            if (pageNum === pdf.numPages) {
-              const cta = document.createElement('a');
-              cta.href = `https://wa.me/971567570905?text=I'm%20interested%20in%20${encodeURIComponent(button.textContent)}%20launch`;
-              cta.textContent = "📩 Connect on WhatsApp";
-              cta.className = "inline-cta";
-              cta.target = "_blank";
-              viewer.appendChild(cta);
-            }
-          });
+        page.render({ canvasContext: context, viewport }).promise.then(() => {
+          viewer.appendChild(canvas);
         });
-      }
-    });
+      });
+    }
+
+    // CTA after rendering
+    const encoded = encodeURIComponent(`Hi, I’m interested in the launch: ${title}`);
+    const cta = document.createElement("a");
+    cta.href = `https://wa.me/971567570905?text=${encoded}`;
+    cta.className = "cta-bubble";
+    cta.textContent = "Connect on WhatsApp";
+    cta.target = "_blank";
+    ctaContainer.appendChild(cta);
+  });
+}
+
+// Toggle event
+document.querySelectorAll(".launch-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    const file = button.getAttribute("data-pdf");
+    const title = button.textContent.trim();
+    renderPDF(file, title);
   });
 });
