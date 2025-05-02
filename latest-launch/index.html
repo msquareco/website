@@ -2,40 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Latest Launch – Offplan | MSQUARECO</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Latest Launch - Offplan | MSQUARECO</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<a class="floating-whatsapp" href="https://wa.me/971567570905" target="_blank" title="Chat with us on WhatsApp">
-  🟢
-</a> 
 <body>
+  <a href="../index.html" class="back-home">← Back to Homepage</a>
+
   <header>
-    <h1>Latest Offplan Launches</h1>
-    <p class="subtitle">Exclusive previews from top developers in Dubai</p>
+    <h1 class="section-heading">Latest Launches – Dubai Offplan</h1>
+    <p class="tagline">Explore brochures directly from top developers</p>
   </header>
 
-  <main>
-    <div class="button-container">
-      <button class="toggle-button" data-pdf="ADDRESS_VILLAS_TIERRA_THE_OASIS - EMMAR.pdf">Emaar – Address Villas</button>
-      <button class="toggle-button" data-pdf="LAGOON VIEWS - DAMAC .pdf">Damac – Lagoon Views</button>
-      <button class="toggle-button" data-pdf="MARITIME - DAMAC.pdf">Damac – Maritime</button>
-      <button class="toggle-button" data-pdf="Orbis - SOBHA.pdf">Sobha – Orbis</button>
-      <button class="toggle-button" data-pdf="SOLAIR 1B - SOBHA.pdf">Sobha – Solair 1B</button>
-      <button class="toggle-button" data-pdf="Skyscape Avenue - SOBHA.pdf">Sobha – Skyscape Avenue</button>
-      <button class="toggle-button" data-pdf="Solis - SOBHA.pdf">Sobha – Solis</button>
-    </div>
+  <div class="toggle-buttons">
+    <button class="toggle-button" data-pdf="ADDRESS_VILLAS_TIERRA_THE_OASIS - EMMAR.pdf">Address Villas – Emaar</button>
+    <button class="toggle-button" data-pdf="LAGOON VIEWS - DAMAC .pdf">Lagoon Views – Damac</button>
+    <button class="toggle-button" data-pdf="MARITIME - DAMAC.pdf">Maritime – Damac</button>
+    <button class="toggle-button" data-pdf="Orbis - SOBHA.pdf">Orbis – Sobha</button>
+    <button class="toggle-button" data-pdf="SOLAIR 1B - SOBHA.pdf">Solair 1B – Sobha</button>
+    <button class="toggle-button" data-pdf="Skyscape Avenue - SOBHA.pdf">Skyscape Avenue – Sobha</button>
+    <button class="toggle-button" data-pdf="Solis - SOBHA.pdf">Solis – Sobha</button>
+  </div>
 
-    <div id="pdf-viewer"></div>
-  </main>
+  <div id="pdf-viewer"></div>
 
-  <footer>
-    &copy; 2025 MSQUARECO. All rights reserved.
-  </footer>
+  <a href="https://wa.me/971567570905?text=Hello%20MSQUARECO" target="_blank" class="whatsapp-float">💬 24/7 Support</a>
 
-  <!-- PDF.js & Custom Viewer -->
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
   <script src="viewer.js"></script>
 </body>
 </html>
-
