@@ -1,253 +1,131 @@
-body {
+/* Reset and base styles */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
   background: #f4f4f4;
   color: #333;
-  line-height: 1.6;
+  padding-bottom: 50px;
 }
 
-header {
+/* Navigation */
+nav {
   background: #004c6d;
-  color: white;
   padding: 1rem 0;
-  text-align: center;
 }
 
-.logo {
-  width: 120px;
-  height: auto;
-  display: block;
-  margin: 0 auto 10px;
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
 }
 
-.container {
-  width: 90%;
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
   max-width: 1000px;
   margin: auto;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#hero {
-  background: linear-gradient(to right, #0077b6, #00b4d8);
-  color: white;
-  padding: 3rem 0;
+h1 {
+  font-size: 2.5rem;
+  color: #004c6d;
+  margin-bottom: 1rem;
   text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #004c6d;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
 }
 
 .btn-whatsapp {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background: #25d366;
+  background-color: #25D366;
   color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
   text-decoration: none;
-  border-radius: 30px;
   font-weight: bold;
+  margin-top: 1rem;
+  transition: opacity 0.3s ease;
 }
 
-section {
-  margin: 2rem 0;
-  padding: 1rem 0;
+.btn-whatsapp:hover {
+  opacity: 0.8;
 }
 
+/* Footer */
 footer {
-  background: #222;
+  background-color: #004c6d;
   color: white;
   text-align: center;
-  padding: 1.5rem 0 3rem;
-  font-size: 0.9rem;
+  padding: 1rem;
   position: relative;
 }
 
-.footer-socials {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 1rem;
+footer a {
+  color: #ddd;
+  text-decoration: none;
+  margin-left: 1rem;
 }
 
-.footer-logo {
-  width: 26px;
-  height: 26px;
+footer a:hover {
+  text-decoration: underline;
 }
 
-/* Responsive Adjustments */
-@media (min-width: 768px) {
-  .logo {
-    width: 90px;
-  }
-
-  .footer-logo {
-    width: 22px;
-    height: 22px;
-  }
-}
-
-/* Sticky Footer Contact Bar (Mobile Only) */
+/* Responsive Design */
 @media (max-width: 767px) {
-  .sticky-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: #ffffff;
-    border-top: 1px solid #ccc;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px 0;
-    z-index: 1000;
+  h1 {
+    font-size: 2rem;
   }
 
-  .sticky-footer a {
-    text-decoration: none;
-    font-size: 0.85rem;
-    color: #333;
-    display: flex;
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .nav-list {
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
   }
 
-  .sticky-footer svg {
-    width: 24px;
-    height: 24px;
-    margin-bottom: 4px;
+  section {
+    padding: 2rem 1rem;
   }
-}
-#about h3 {
-  font-size: 1.8rem;
-  color: #004c6d;
-  margin-bottom: 1rem;
-}
 
-#about p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-/* Real Talk Bubble */
-#realTalkBubble {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #004c6d;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 25px;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 999;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: background 0.3s ease;
-}
-
-#realTalkBubble:hover {
-  background: #00688b;
-}
-
-/* Real Talk Panel */
-#realTalkPanel {
-  position: fixed;
-  bottom: 70px;
-  right: 20px;
-  width: 300px;
-  max-height: 400px;
-  background: white;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-  display: none;
-  flex-direction: column;
-  z-index: 1000;
-  overflow: auto;
-}
-
-.real-talk-header {
-  background: #004c6d;
-  color: white;
-  padding: 10px;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
-.real-talk-header .close-btn {
-  cursor: pointer;
-  font-size: 1.2rem;
-}
-
-.real-talk-content {
-  padding: 15px;
-  font-size: 0.95rem;
-  color: #333;
-}
-
-.real-talk-content ul {
-  padding-left: 18px;
-  margin-top: 10px;
-}
-
-.real-talk-content a.btn-whatsapp {
-  display: inline-block;
-  margin-top: 10px;
-  background: #25D366;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 20px;
-  font-weight: bold;
-  text-decoration: none;
-}
-/* Existing styles for your website */
-
-/* Chatbot specific styles */
-#chat-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #f1f1f1;
-  border-radius: 10px;
-  padding: 20px;
-  width: 300px;
-}
-
-#chatbox {
-  display: flex;
-  flex-direction: column;
-}
-
-#chat-log {
-  max-height: 300px;
-  overflow-y: auto;
-  margin-bottom: 10px;
-}
-
-input[type="text"] {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-button {
-  padding: 10px;
-  border-radius: 5px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
+  ul {
+    margin-left: 1rem;
+  }
 }
