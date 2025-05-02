@@ -1,48 +1,41 @@
-const viewer = document.getElementById("pdf-viewer");
-const buttons = document.querySelectorAll(".toggle-button");
+const viewer = document.getElementById('pdf-viewer');
+const buttons = document.querySelectorAll('.toggle-button');
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js";
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
 
 buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    const file = button.getAttribute("data-pdf");
-    const url = `pdf/${file}`;
-    viewer.innerHTML = "";
+  button.addEventListener('click', () => {
+    const pdfPath = 'pdf/' + button.getAttribute('data-pdf');
+    viewer.innerHTML = ''; // Clear viewer
 
-    pdfjsLib.getDocument(url).promise.then(pdf => {
-      const renderPage = (pageNum) => {
+    pdfjsLib.getDocument(pdfPath).promise.then(pdf => {
+      for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
         pdf.getPage(pageNum).then(page => {
-          const canvas = document.createElement("canvas");
-          const context = canvas.getContext("2d");
+          const canvas = document.createElement('canvas');
+          const context = canvas.getContext('2d');
+          const scale = 1.5;
+          const viewport = page.getViewport({ scale: scale });
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
 
-          const fixedWidth = 800;
-          const viewport = page.getViewport({ scale: 1 });
-          const scale = fixedWidth / viewport.width;
-          const scaledViewport = page.getViewport({ scale });
-
-          canvas.width = scaledViewport.width;
-          canvas.height = scaledViewport.height;
-
-          page.render({
+          const renderContext = {
             canvasContext: context,
-            viewport: scaledViewport
-          }).promise.then(() => {
+            viewport: viewport
+          };
+
+          page.render(renderContext).promise.then(() => {
             viewer.appendChild(canvas);
-            if (pageNum < pdf.numPages) {
-              renderPage(pageNum + 1);
-            } else {
-              const cta = document.createElement("a");
-              cta.href = `https://wa.me/971567570905?text=I'm%20interested%20in%20the%20project:%20${encodeURIComponent(file)}`;
-              cta.target = "_blank";
+            if (pageNum === pdf.numPages) {
+              const cta = document.createElement('a');
+              cta.href = `https://wa.me/971567570905?text=I'm%20interested%20in%20${encodeURIComponent(button.textContent)}%20launch`;
+              cta.textContent = "📩 Connect on WhatsApp";
               cta.className = "inline-cta";
-              cta.innerHTML = "📩 Connect on WhatsApp";
+              cta.target = "_blank";
               viewer.appendChild(cta);
             }
           });
         });
-      };
-
-      renderPage(1);
+      }
     });
   });
 });
