@@ -21,16 +21,16 @@ header {
 }
 
 .branding {
-  background-color: #f0f0f0;  /* Light background behind logo */
-  padding: 10px 20px;         /* Padding for some spacing */
+  background-color: #333333;  /* Darker background for the logo */
+  padding: 10px 20px;          /* Padding for spacing */
   display: inline-block;
-  border-radius: 10px;        /* Rounded corners for elegance */
+  border-radius: 10px;         /* Rounded corners for elegance */
 }
 
 .branding .logo {
-  max-height: 80px;
+  max-height: 120px;           /* Adjusted to a larger max height */
+  width: auto;                 /* Maintain aspect ratio */
   height: auto;
-  width: auto;
   display: block;
   margin: 0 auto;
 }
