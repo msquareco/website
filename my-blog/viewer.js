@@ -4,10 +4,10 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs
 
 const viewer = document.getElementById('pdf-viewer');
 const buttons = document.querySelectorAll('.toggle-button');
+const backToTopBtn = document.getElementById('back-to-top');
 
 async function loadPDF(url) {
-  viewer.innerHTML = ''; // Clear existing pages
-
+  viewer.innerHTML = ''; // Clear old PDF
   const pdf = await pdfjsLib.getDocument(url).promise;
 
   for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
@@ -28,16 +28,31 @@ async function loadPDF(url) {
     await page.render(renderContext).promise;
     viewer.appendChild(canvas);
   }
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Load first PDF initially
+// Load first blog by default
 loadPDF(buttons[0].getAttribute('data-pdf'));
 
-// Toggle functionality
+// Toggle buttons
 buttons.forEach(button => {
   button.addEventListener('click', () => {
     buttons.forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
     loadPDF(button.getAttribute('data-pdf'));
   });
+});
+
+// Back to top logic
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    backToTopBtn.style.display = 'block';
+  } else {
+    backToTopBtn.style.display = 'none';
+  }
+});
+
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
