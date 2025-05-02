@@ -2,38 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Latest Launches – MSQUARECO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latest Developer Launches</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <div class="branding">
-      <a href="../index.html" class="home-link">← Home</a>
-      <h1 class="brand-text">Latest Developer Launches</h1>
-    </div>
+    <a href="/" class="back-home">← Home</a>
+    <h1>Latest Developer Launches</h1>
+    <p class="tagline">Explore exclusive brochures from top Dubai developers</p>
   </header>
 
-  <main>
-    <div class="launch-selector">
-      <!-- Bubbles to toggle -->
-      <button class="launch-btn" data-pdf="pdf/ADDRESS_VILLAS_TIERRA_THE_OASIS - EMMAR.pdf">ADDRESS VILLAS – EMAAR</button>
-      <button class="launch-btn" data-pdf="pdf/LAGOON VIEWS - DAMAC .pdf">LAGOON VIEWS – DAMAC</button>
-      <button class="launch-btn" data-pdf="pdf/MARITIME - DAMAC.pdf">MARITIME – DAMAC</button>
-      <button class="launch-btn" data-pdf="pdf/Orbis - SOBHA.pdf">ORBIS – SOBHA</button>
-      <button class="launch-btn" data-pdf="pdf/SOLAIR 1B - SOBHA.pdf">SOLAIR 1B – SOBHA</button>
-      <button class="launch-btn" data-pdf="pdf/Skyscape Avenue - SOBHA.pdf">SKYSCAPE AVENUE – SOBHA</button>
-      <button class="launch-btn" data-pdf="pdf/Solis - SOBHA.pdf">SOLIS – SOBHA</button>
-    </div>
-
-    <div id="pdf-viewer"></div>
-    <div id="cta-container"></div>
+  <main class="button-container">
+    <button class="pdf-button" data-pdf="pdfs/Address Villas – EMAAR.pdf">ADDRESS VILLAS – EMAAR</button>
+    <button class="pdf-button" data-pdf="pdfs/Lagoon Views – DAMAC.pdf">LAGOON VIEWS – DAMAC</button>
+    <button class="pdf-button" data-pdf="pdfs/Maritime – DAMAC.pdf">MARITIME – DAMAC</button>
+    <button class="pdf-button" data-pdf="pdfs/Orbis – SOBHA.pdf">ORBIS – SOBHA</button>
+    <button class="pdf-button" data-pdf="pdfs/Solair 1B – SOBHA.pdf">SOLAIR 1B – SOBHA</button>
+    <button class="pdf-button" data-pdf="pdfs/Skyscape Avenue – SOBHA.pdf">SKYSCAPE AVENUE – SOBHA</button>
+    <button class="pdf-button" data-pdf="pdfs/Solis – SOBHA.pdf">SOLIS – SOBHA</button>
   </main>
 
-  <a href="#" class="back-to-top">↑</a>
-  <a href="https://wa.me/971567570905" class="floating-whatsapp" target="_blank" title="Chat with us on WhatsApp">💬</a>
+  <section id="pdf-viewer-container">
+    <canvas id="pdf-canvas"></canvas>
+  </section>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
-  <script src="launch-viewer.js"></script>
+  <!-- WhatsApp CTA Button -->
+  <a href="https://wa.me/971555555555?text=I'm%20interested%20in%20this%20developer%20brochure" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+    💬 Chat Now
+  </a>
+
+  <!-- Back to Top Button -->
+  <button onclick="scrollToTop()" id="topBtn" title="Go to top">⬆️</button>
+
+  <script src="viewer.js"></script>
 </body>
 </html>
