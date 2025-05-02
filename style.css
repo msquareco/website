@@ -99,3 +99,17 @@ footer {
   font-size: 0.9rem;
   color: #9c9c9c;
 }
+.branding h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2.2rem;
+  font-weight: normal;
+  color: #2c2c2c;
+  letter-spacing: 1px;
+}
+
+.branding .since {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-left: 8px;
+  color: #6c6a68;
+}
