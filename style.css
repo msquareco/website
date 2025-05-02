@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* Timeless Elegance Theme */
 * {
   margin: 0;
   padding: 0;
@@ -6,152 +6,87 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Georgia', serif;
+  background-color: #f9f7f4;
+  color: #2c2c2c;
   line-height: 1.6;
-  background: #f4f4f4;
-  color: #333;
-  font-size: 16px;
-  padding-bottom: 50px;
-}
-
-/* Header and Branding */
-.site-header {
-  background: #004c6d;
-  color: white;
-  padding: 1.5rem 1rem;
+  padding: 20px;
   text-align: center;
 }
 
-.branding h1 {
-  font-size: 1.75rem;
-  margin-bottom: 0.25rem;
+header {
+  background-color: #ffffff;
+  padding: 30px 0;
+  border-bottom: 1px solid #e2dfda;
 }
 
-.branding .tagline {
-  font-size: 0.95rem;
-  color: #d0e9f4;
-  font-weight: normal;
+.branding .logo {
+  max-height: 80px;
+  height: auto;
+  width: auto;
 }
 
-/* Navigation */
-nav {
-  margin-top: 1rem;
+main {
+  padding: 60px 20px;
 }
 
-.nav-list {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  gap: 1.5rem;
-  flex-wrap: wrap;
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
 }
 
-.nav-list a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
+.tagline {
+  font-size: 1.4rem;
+  color: #6c6a68;
+  margin-bottom: 30px;
 }
 
-.nav-list a:hover {
-  text-decoration: underline;
-}
-
-/* Sections */
-section {
-  padding: 3rem 1.5rem;
-  max-width: 900px;
-  margin: auto;
-}
-
-h2, h3 {
-  color: #004c6d;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-size: 1.3rem;
-}
-
-p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  text-align: center;
-}
-
-ul {
-  list-style-type: disc;
-  margin-left: 2rem;
-  margin-top: 1rem;
-  font-size: 1rem;
-}
-
-/* Buttons */
-.btn-whatsapp {
+.cta-button,
+.secondary-button {
   display: inline-block;
-  background-color: #25D366;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
+  padding: 14px 28px;
+  margin: 15px 10px;
+  border-radius: 30px;
+  font-size: 1.1rem;
   text-decoration: none;
-  font-weight: bold;
-  margin-top: 1rem;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  font-family: 'Georgia', serif;
 }
 
-.btn-whatsapp:hover {
-  background-color: #1ebc5e;
+.cta-button {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 1px solid transparent;
 }
 
-/* Footer */
+.cta-button:hover {
+  background-color: #333;
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+}
+
+.secondary-button:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.context h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.context p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
 footer {
-  background-color: #004c6d;
-  color: white;
-  text-align: center;
-  padding: 1rem;
+  margin-top: 60px;
   font-size: 0.9rem;
-}
-
-footer a {
-  color: #ccc;
-  text-decoration: none;
-  margin-left: 0.5rem;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-list {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  h2 {
-    font-size: 1.3rem;
-  }
-
-  h3 {
-    font-size: 1.1rem;
-  }
-
-  .branding h1 {
-    font-size: 1.4rem;
-  }
-
-  .branding .tagline {
-    font-size: 0.85rem;
-  }
-
-  section {
-    padding: 2rem 1rem;
-  }
+  color: #9c9c9c;
 }
