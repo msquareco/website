@@ -1,3 +1,8 @@
+console.log("Running viewer.js");
+
+const url = 'pdf/DXB RE Investment Forecast 2025.pdf';
+// rest of the code...
+
 const url = 'pdf/DXB RE Investment Forecast 2025.pdf'; // Update this for different blogs
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
