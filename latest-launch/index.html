@@ -3,33 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Latest Launch - Offplan | MSQUARECO</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Latest Launches – MSQUARECO</title>
+  <link rel="stylesheet" href="launch-style.css" />
 </head>
 <body>
-  <a href="../index.html" class="back-home">← Back to Homepage</a>
-
   <header>
-    <h1 class="section-heading">Latest Launches – Dubai Offplan</h1>
-    <p class="tagline">Explore brochures directly from top developers</p>
+    <div class="branding">
+      <a href="../index.html" class="home-link">← Home</a>
+      <h1 class="brand-text">Latest Developer Launches</h1>
+    </div>
   </header>
 
-  <div class="toggle-buttons">
-    <button class="toggle-button" data-pdf="ADDRESS_VILLAS_TIERRA_THE_OASIS - EMMAR.pdf">Address Villas – Emaar</button>
-    <button class="toggle-button" data-pdf="LAGOON VIEWS - DAMAC .pdf">Lagoon Views – Damac</button>
-    <button class="toggle-button" data-pdf="MARITIME - DAMAC.pdf">Maritime – Damac</button>
-    <button class="toggle-button" data-pdf="Orbis - SOBHA.pdf">Orbis – Sobha</button>
-    <button class="toggle-button" data-pdf="SOLAIR 1B - SOBHA.pdf">Solair 1B – Sobha</button>
-    <button class="toggle-button" data-pdf="Skyscape Avenue - SOBHA.pdf">Skyscape Avenue – Sobha</button>
-    <button class="toggle-button" data-pdf="Solis - SOBHA.pdf">Solis – Sobha</button>
-  </div>
+  <main>
+    <div class="launch-selector">
+      <!-- Bubbles to toggle -->
+      <button class="launch-btn" data-pdf="pdf/ADDRESS_VILLAS_TIERRA_THE_OASIS - EMMAR.pdf">ADDRESS VILLAS – EMAAR</button>
+      <button class="launch-btn" data-pdf="pdf/LAGOON VIEWS - DAMAC .pdf">LAGOON VIEWS – DAMAC</button>
+      <button class="launch-btn" data-pdf="pdf/MARITIME - DAMAC.pdf">MARITIME – DAMAC</button>
+      <button class="launch-btn" data-pdf="pdf/Orbis - SOBHA.pdf">ORBIS – SOBHA</button>
+      <button class="launch-btn" data-pdf="pdf/SOLAIR 1B - SOBHA.pdf">SOLAIR 1B – SOBHA</button>
+      <button class="launch-btn" data-pdf="pdf/Skyscape Avenue - SOBHA.pdf">SKYSCAPE AVENUE – SOBHA</button>
+      <button class="launch-btn" data-pdf="pdf/Solis - SOBHA.pdf">SOLIS – SOBHA</button>
+    </div>
 
-  <div id="pdf-viewer"></div>
+    <div id="pdf-viewer"></div>
+    <div id="cta-container"></div>
+  </main>
 
-  <a href="https://wa.me/971567570905?text=Hello%20MSQUARECO" target="_blank" class="whatsapp-float">💬 24/7 Support</a>
+  <a href="#" class="back-to-top">↑</a>
+  <a href="https://wa.me/971567570905" class="floating-whatsapp" target="_blank" title="Chat with us on WhatsApp">💬</a>
 
-  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
-  <script src="viewer.js"></script>
+  <script src="launch-viewer.js"></script>
 </body>
 </html>
