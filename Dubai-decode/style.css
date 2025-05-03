@@ -1,0 +1,95 @@
+/* Fonts */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f9f9f6;
+    color: #2e2e2e;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #2e2e2e;
+    margin-top: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+.subheading {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #888;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 40px;
+    border-bottom: 2px solid #d4af37;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 40px 0 20px;
+    text-align: center;
+}
+
+section.content {
+    padding-bottom: 60px;
+}
+
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+a {
+    color: #50C878;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: #2e2e2e;
+}
+
+.contact-links li {
+    margin-bottom: 10px;
+}
+
+.form-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    padding: 20px;
+    margin-top: 30px;
+}
