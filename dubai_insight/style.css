@@ -1,0 +1,99 @@
+/* Base Typography */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f6;
+  color: #2e2e2e;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: #2e2e2e;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.max-w-6xl {
+  max-width: 72rem;
+}
+
+.max-w-5xl {
+  max-width: 64rem;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Buttons */
+.btn {
+  background-color: #f3c77b;
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: #2e2e2e;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn:hover {
+  background-color: #e2b95f;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+/* Footer */
+#footer {
+  background-color: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px 10px;
+}
+
+a {
+  color: #f3c77b;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #e2b95f;
+}
