@@ -1,62 +1,96 @@
-/* Global Fonts */
-body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f6;
-  color: #1a1a1a;
+:root {
+  --gold: #f3c77b;
+  --gold-dark: #e2b95f;
+  --text-dark: #1a1a1a;
+  --bg-light: #f9f9f6;
+  --bg-bubble: #ffffff;
 }
 
-h1, h2, h3, h4 {
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  color: #1a1a1a;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
 }
 
 p {
-  font-size: 1rem;
-  color: #333;
+  color: #444;
+  margin-bottom: 1.5rem;
 }
 
-/* CTA Buttons */
-.cta-button {
+header {
+  text-align: center;
+  padding: 80px 24px 40px;
+  background-color: #f6f3ef;
+}
+
+.subheading {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #666;
+}
+
+section {
+  padding: 60px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.bubble {
+  background-color: var(--bg-bubble);
+  padding: 48px;
+  border-radius: 32px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.btn, .cta-button {
   display: inline-block;
-  background-color: #1a1a1a;
-  color: white;
   padding: 0.75rem 1.5rem;
+  background-color: var(--gold);
+  color: var(--text-dark);
+  border: none;
   border-radius: 9999px;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover, .cta-button:hover {
+  background-color: var(--gold-dark);
+  transform: translateY(-1px);
+}
+
+footer {
+  background-color: #f6f3ef;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+footer a {
+  color: var(--gold);
   text-decoration: none;
 }
 
-.cta-button:hover {
-  background-color: #333;
+footer a:hover {
+  color: var(--gold-dark);
 }
 
-.cta-button-outline {
-  display: inline-block;
-  background-color: transparent;
-  color: #1a1a1a;
-  padding: 0.75rem 1.5rem;
-  border: 2px solid #1a1a1a;
-  border-radius: 9999px;
-  font-weight: 600;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  text-decoration: none;
-}
-
-.cta-button-outline:hover {
-  background-color: #1a1a1a;
-  color: white;
-}
-
-/* Section fade-up animation */
 .fade-up {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .fade-up.visible {
@@ -64,213 +98,22 @@ p {
   transform: translateY(0);
 }
 
-/* Responsive utilities */
-@media (min-width: 768px) {
-  .text-lg {
-    font-size: 1.125rem;
-  }
-
-  .text-xl {
-    font-size: 1.25rem;
-  }
-
-  .text-2xl {
-    font-size: 1.5rem;
-  }
-
-  .text-3xl {
-    font-size: 1.875rem;
-  }
-
-  .text-4xl {
-    font-size: 2.25rem;
-  }
-
-  .text-5xl {
-    font-size: 3rem;
-  }
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  width: 56px;
+  height: 56px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-
-/* Base Reset & Typography */
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f9f9f6;
-  color: #2e2e2e;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
-
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
-  color: #1e1e1e;
-}
-
-p {
-  color: #444;
-}
-
-a {
-  color: #f3c77b;
-  text-decoration: none;
-}
-a:hover {
-  color: #e2b95f;
-}
-
-/* Layout Utilities */
-.text-center {
-  text-align: center;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.max-w-6xl { max-width: 72rem; }
-.max-w-5xl { max-width: 64rem; }
-.max-w-2xl { max-width: 42rem; }
-
-section {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.p-6 {
-  padding: 1.5rem;
-}
-.rounded-2xl {
-  border-radius: 1rem;
-}
-.hidden {
-  display: none;
-}
-.text-lg {
-  font-size: 1.125rem;
-}
-.text-sm {
-  font-size: 0.875rem;
-}
-
-/* Header */
-#header {
-  background-color: #003366;
-  text-align: center;
-  padding: 30px 0;
-}
-
-#header img {
-  max-width: 200px;
-  opacity: 0.9;
-}
-
-#header .tagline {
-  font-size: 1.2rem;
-  color: #f3c77b;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-/* Buttons */
-.btn,
-button[type="submit"] {
-  background-color: #f3c77b;
-  padding: 12px 24px;
-  border-radius: 8px;
-  color: #2e2e2e;
-  font-weight: bold;
-  text-align: center;
-  transition: all 0.3s ease;
-  display: inline-block;
-  border: 1px solid #e2b95f;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-}
-
-.btn:hover,
-button[type="submit"]:hover {
-  background-color: #e2b95f;
-  transform: translateY(-2px);
-}
-
-/* Form Styling */
-form input[type="text"],
-form input[type="email"],
-form textarea {
-  width: 100%;
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  font-family: inherit;
-  font-size: 1rem;
-  background-color: #fff;
-  box-sizing: border-box;
-}
-
-/* CTA Buttons */
-.cta-button {
-  background-color: #f3c77b;
-  color: #2e2e2e;
-  padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  transition: background-color 0.3s;
-}
-.cta-button:hover {
-  background-color: #e2b95f;
-}
-.cta-button-outline {
-  border: 2px solid #2e2e2e;
-  color: #2e2e2e;
-  padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  transition: background-color 0.3s, color 0.3s;
-}
-.cta-button-outline:hover {
-  background-color: #2e2e2e;
-  color: #fff;
-}
-
-/* Footer */
-#footer {
-  background-color: #003366;
-  color: #fff;
-  text-align: center;
-  padding: 40px 20px 20px;
-  font-size: 0.95rem;
-}
-
-/* Animation */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.fade-up {
-  animation: fadeUp 1s ease forwards;
-  opacity: 0;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  section {
-    padding: 40px 16px;
-  }
-  .btn,
-  button[type="submit"] {
-    padding: 10px 20px;
-    font-size: 1rem;
-  }
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
+.whatsapp-float img {
+  width: 28px;
+  height: 28px;
 }
