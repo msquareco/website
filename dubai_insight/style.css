@@ -1,19 +1,24 @@
-/* Base Typography */
+/* Base Reset & Typography */
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f9f9f6;
   color: #2e2e2e;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: bold;
-  color: #2e2e2e;
+  color: #1e1e1e;
 }
 
-/* Utility Classes */
+p {
+  color: #444;
+}
+
+/* Layout Utility */
 .text-center {
   text-align: center;
 }
@@ -35,16 +40,14 @@ h1, h2, h3 {
   max-width: 42rem;
 }
 
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .p-6 {
   padding: 1.5rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
 }
 
 .rounded-2xl {
@@ -55,6 +58,33 @@ h1, h2, h3 {
   display: none;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+/* Header */
+#header {
+  background-color: #003366;
+  text-align: center;
+  padding: 30px 0;
+}
+
+#header img {
+  max-width: 200px;
+  opacity: 0.9;
+}
+
+#header .tagline {
+  font-size: 1.2rem;
+  color: #f3c77b;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
 /* Buttons */
 .btn {
   background-color: #f3c77b;
@@ -63,12 +93,24 @@ h1, h2, h3 {
   color: #2e2e2e;
   font-weight: bold;
   text-align: center;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   display: inline-block;
+  border: 1px solid #e2b95f;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .btn:hover {
   background-color: #e2b95f;
+  transform: translateY(-2px);
+}
+
+/* Cards & Shadows */
+.shadow-md {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.bg-white {
+  background-color: #fdfaf5;
 }
 
 /* Form Inputs */
@@ -79,6 +121,7 @@ textarea {
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 0.5rem;
+  font-family: inherit;
 }
 
 /* Footer */
@@ -86,7 +129,8 @@ textarea {
   background-color: #003366;
   color: #fff;
   text-align: center;
-  padding: 30px 20px 10px;
+  padding: 40px 20px 20px;
+  font-size: 0.95rem;
 }
 
 a {
@@ -96,4 +140,41 @@ a {
 
 a:hover {
   color: #e2b95f;
+}
+
+/* Animation Keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  section {
+    padding: 40px 16px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
 }
