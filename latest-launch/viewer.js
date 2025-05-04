@@ -24,6 +24,29 @@ function renderPDF(url, title) {
       });
     }
 
+async function loadPDF(url, Title) {
+  viewer.innerHTML = ''; // Clear old content
+
+  const pdf = await pdfjsLib.getDocument(url).promise;
+  for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+    const page = await pdf.getPage(pageNum);
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext('2d');
+
+    const scale = 1.5;
+    const viewport = page.getViewport({ scale });
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
+
+    const renderContext = {
+      canvasContext: context,
+      viewport: viewport
+    };
+
+    await page.render(renderContext).promise;
+    viewer.appendChild(canvas);
+  }
+    
     // CTA after rendering
     const encoded = encodeURIComponent(`Hi, I’m interested in the launch: ${title}`);
     const cta = document.createElement("a");
