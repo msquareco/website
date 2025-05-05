@@ -1,76 +1,59 @@
-const viewer = document.getElementById("pdf-viewer");
-const ctaContainer = document.getElementById("cta-container");
-
+// Set up PDF.js worker
 pdfjsLib.GlobalWorkerOptions.workerSrc =
   "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js";
 
+// Get DOM elements
+const viewer = document.getElementById("pdf-viewer") || document.getElementById("pdf-canvas")?.parentElement;
+const ctaContainer = document.getElementById("cta-container");
+
+// Main PDF rendering function
 function renderPDF(url, title) {
   viewer.innerHTML = "";
-  ctaContainer.innerHTML = "";
+  if (ctaContainer) ctaContainer.innerHTML = "";
 
-  pdfjsLib.getDocument(url).promise.then(pdf => {
+  pdfjsLib.getDocument(url).promise.then(async (pdf) => {
     for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-      pdf.getPage(pageNum).then(page => {
-        const canvas = document.createElement("canvas");
-        const context = canvas.getContext("2d");
-        const viewport = page.getViewport({ scale: 1.5 });
+      const page = await pdf.getPage(pageNum);
+      const canvas = document.createElement("canvas");
+      const context = canvas.getContext("2d");
 
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
+      const scale = 1.5;
+      const viewport = page.getViewport({ scale });
+      canvas.height = viewport.height;
+      canvas.width = viewport.width;
 
-        page.render({ canvasContext: context, viewport }).promise.then(() => {
-          viewer.appendChild(canvas);
-        });
-      });
+      await page.render({ canvasContext: context, viewport }).promise;
+      viewer.appendChild(canvas);
     }
 
-async function loadPDF(url, Title) {
-  viewer.innerHTML = ''; // Clear old content
-
-  const pdf = await pdfjsLib.getDocument(url).promise;
-  for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-    const page = await pdf.getPage(pageNum);
-    const canvas = document.createElement("canvas");
-    const context = canvas.getContext('2d');
-
-    const scale = 1.5;
-    const viewport = page.getViewport({ scale });
-    canvas.height = viewport.height;
-    canvas.width = viewport.width;
-
-    const renderContext = {
-      canvasContext: context,
-      viewport: viewport
-    };
-
-    await page.render(renderContext).promise;
-    viewer.appendChild(canvas);
-  }
-    
-    // CTA after rendering
-    const encoded = encodeURIComponent(`Hi, I’m interested in the launch: ${title}`);
-    const cta = document.createElement("a");
-    cta.href = `https://wa.me/971567570905?text=${encoded}`;
-    cta.className = "cta-bubble";
-    cta.textContent = "Connect on WhatsApp";
-    cta.target = "_blank";
-    ctaContainer.appendChild(cta);
+    // CTA after rendering (optional)
+    if (ctaContainer) {
+      const encoded = encodeURIComponent(`Hi, I’m interested in the launch: ${title}`);
+      const cta = document.createElement("a");
+      cta.href = `https://wa.me/971567570905?text=${encoded}`;
+      cta.className = "cta-bubble";
+      cta.textContent = "Connect on WhatsApp";
+      cta.target = "_blank";
+      ctaContainer.appendChild(cta);
+    }
   });
 }
 
 // Toggle event
-document.querySelectorAll(".launch-btn").forEach(button => {
+document.querySelectorAll(".pdf-button").forEach((button) => {
   button.addEventListener("click", () => {
     const file = button.getAttribute("data-pdf");
     const title = button.textContent.trim();
     renderPDF(file, title);
   });
 });
-// Show/hide scroll to top button
+
+// Scroll-to-top behavior
 window.onscroll = function () {
-  document.getElementById("topBtn").style.display = window.scrollY > 100 ? "block" : "none";
+  const btn = document.getElementById("topBtn");
+  if (btn) btn.style.display = window.scrollY > 100 ? "block" : "none";
 };
 
 function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
