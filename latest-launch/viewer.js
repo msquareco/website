@@ -1,57 +1,45 @@
-// Set up PDF.js worker
-pdfjsLib.GlobalWorkerOptions.workerSrc =
-  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js";
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js";
 
-// Get DOM elements
-const viewer = document.getElementById("pdf-viewer") || document.getElementById("pdf-canvas")?.parentElement;
-const ctaContainer = document.getElementById("cta-container");
+const canvas = document.getElementById("pdf-canvas");
+const context = canvas.getContext("2d");
 
-// Main PDF rendering function
-function renderPDF(url, title) {
-  viewer.innerHTML = "";
-  if (ctaContainer) ctaContainer.innerHTML = "";
+function renderPDF(url) {
+  // Clear canvas visually
+  context.clearRect(0, 0, canvas.width, canvas.height);
 
-  pdfjsLib.getDocument(url).promise.then(async (pdf) => {
-    for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
-      const page = await pdf.getPage(pageNum);
-      const canvas = document.createElement("canvas");
-      const context = canvas.getContext("2d");
+  pdfjsLib.getDocument(url).promise.then(pdf => {
+    console.log("PDF loaded:", url);
 
+    // Load the first page
+    return pdf.getPage(1).then(page => {
       const scale = 1.5;
       const viewport = page.getViewport({ scale });
-      canvas.height = viewport.height;
+
       canvas.width = viewport.width;
+      canvas.height = viewport.height;
 
-      await page.render({ canvasContext: context, viewport }).promise;
-      viewer.appendChild(canvas);
-    }
-
-    // CTA after rendering (optional)
-    if (ctaContainer) {
-      const encoded = encodeURIComponent(`Hi, I’m interested in the launch: ${title}`);
-      const cta = document.createElement("a");
-      cta.href = `https://wa.me/971567570905?text=${encoded}`;
-      cta.className = "cta-bubble";
-      cta.textContent = "Connect on WhatsApp";
-      cta.target = "_blank";
-      ctaContainer.appendChild(cta);
-    }
+      const renderContext = {
+        canvasContext: context,
+        viewport: viewport
+      };
+      return page.render(renderContext).promise;
+    });
+  }).catch(err => {
+    console.error("Failed to load PDF:", err.message);
+    alert("⚠️ Failed to load the PDF. Check file path or name.");
   });
 }
 
-// Toggle event
-document.querySelectorAll(".pdf-button").forEach((button) => {
+document.querySelectorAll(".pdf-button").forEach(button => {
   button.addEventListener("click", () => {
     const file = button.getAttribute("data-pdf");
-    const title = button.textContent.trim();
-    renderPDF(file, title);
+    renderPDF(file);
   });
 });
 
-// Scroll-to-top behavior
 window.onscroll = function () {
-  const btn = document.getElementById("topBtn");
-  if (btn) btn.style.display = window.scrollY > 100 ? "block" : "none";
+  document.getElementById("topBtn").style.display =
+    window.scrollY > 100 ? "block" : "none";
 };
 
 function scrollToTop() {
