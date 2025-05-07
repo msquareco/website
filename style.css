@@ -146,3 +146,21 @@ footer {
   transform: translateY(-2px);
 }
 
+.hero-button {
+  display: inline-block;
+  border: 2px solid #1f1f1f;
+  background-color: transparent;
+  color: #1f1f1f;
+  padding: 10px 24px;
+  margin: 0 8px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #1f1f1f;
+  color: white;
+}
