@@ -3,138 +3,233 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FAQ – Dubai Real Estate</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>FAQs - Dubai Property Investment</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .faq-container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .faq-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .faq-heading h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .faq-heading p {
+      color: #777;
+      font-size: 1rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
+      cursor: pointer;
+    }
+
+    .faq-question {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #1f1f1f;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-answer {
+      display: none;
+      padding-top: 10px;
+      font-size: 0.95rem;
+      color: #444;
+      max-width: 720px;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-icon {
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+  </style>
 </head>
-<body class="faq-page">
-
-  <section class="faq-hero">
-    <h1>❓ Frequently Asked Questions</h1>
-    <p>Helping you make confident, informed decisions.</p>
-  </section>
-
-  <section class="faq-container">
-    <!-- Accordion Items -->
-    <div class="accordion">
-      <div class="accordion-item">
-        <button class="accordion-header">1. Why is Dubai such a popular destination for real estate investment right now?</button>
-        <div class="accordion-content">
-          <p>Dubai is currently experiencing a dynamic growth phase. The property market has shown consistent appreciation across key segments — from luxury waterfronts to affordable suburbs. High rental yields (typically 6%–10%), zero property tax, and world-class infrastructure are drawing investors from around the world...</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">2. Is Dubai property investment only for the ultra-wealthy?</button>
-        <div class="accordion-content">
-          <p>Not at all. Dubai’s real estate market is inclusive. Whether you're a first-time buyer looking for a studio apartment or a seasoned investor eyeing luxury villas or commercial assets — there’s a structured entry point for every budget...</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">3. I'm not a UAE resident — can I still buy property in Dubai?</button>
-        <div class="accordion-content">
-          <p>Yes, absolutely. Dubai welcomes foreign investors with open arms. You can own freehold property in designated areas regardless of your nationality or residency...</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">4. How safe and transparent is the process?</button>
-        <div class="accordion-content">
-          <p>Dubai follows strict regulatory protocols. Every real estate transaction is governed by the Dubai Land Department (DLD) and RERA, ensuring complete transparency...</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">5. What are the AML (Anti-Money Laundering) guidelines for property buyers?</button>
-        <div class="accordion-content">
-          <p>Dubai enforces internationally aligned AML regulations. As a buyer, you may be required to provide basic KYC documents...</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">6. What is the minimum investment required?</button>
-        <div class="accordion-content">
-          <p>Entry-level properties start at around AED 700,000 (~USD 190,000). For those aiming for the 10-year UAE Golden Visa, the threshold begins at AED 2 million (~USD 545,000)...</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">7. Can I rent out my property if I live abroad?</button>
-        <div class="accordion-content">
-          <p>Yes. You have two options: long-term leasing or holiday home model. We connect you with licensed property managers who handle everything from tenant communication to maintenance...</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">8. What kind of returns can I expect?</button>
-        <div class="accordion-content">
-          <p>Returns depend on location, property type, and whether it’s off-plan or ready-to-move-in. Residential properties yield 6–8%, holiday homes 10–12%, and off-plan may appreciate 15–25%...</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">9. Is financing available for expats or overseas investors?</button>
-        <div class="accordion-content">
-          <p>Yes. UAE banks offer mortgages to non-residents, and many developers offer flexible post-handover payment plans. We'll help you explore both...</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">10. Can I sell my property later, and what are the costs involved?</button>
-        <div class="accordion-content">
-          <p>Yes, Dubai has a very active resale market. Transfer costs, agency fees, and mortgage clearance are transparently handled. We assist end-to-end...</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">11. What is the difference between off-plan and ready-to-move-in properties?</button>
-        <div class="accordion-content">
-          <p>Off-plan: under construction, lower cost, flexible plans. Ready-to-move: immediate returns. We help evaluate both based on your timeline and goals...</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">12. Are there any taxes I need to pay on property income or capital gains?</button>
-        <div class="accordion-content">
-          <p>Dubai offers one of the most tax-friendly environments globally. No income tax, no capital gains tax, no annual property tax. Only a one-time DLD fee of 4% applies...</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">13. Can I buy property jointly with a spouse, family member, or business partner?</button>
-        <div class="accordion-content">
-          <p>Yes. Dubai allows joint ownership and records all names and percentages on the title deed. Great for families or investment groups...</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">14. What if I change my mind or need to exit early from an off-plan investment?</button>
-        <div class="accordion-content">
-          <p>You can resell (if conditions allow) or cancel — possibly incurring fees. We help you assess all implications before making the call...</p>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <button class="accordion-header">15. How do I ensure I’m buying from a reliable developer or broker?</button>
-        <div class="accordion-content">
-          <p>We only work with licensed and RERA-approved developers/brokers. You can independently verify any entity via the Dubai REST app...</p>
-        </div>
-      </div>
+<body>
+  <main class="faq-container">
+    <div class="faq-heading">
+      <h1>❓ Frequently Asked Questions</h1>
+      <p>Helping you make confident, informed decisions.</p>
     </div>
-  </section>
+
+    <!-- Repeat this .faq-item for each question -->
+   <div class="faq-item">
+  <div class="faq-question">
+    <span>1. Why is Dubai such a popular destination for real estate investment right now?</span>
+    <span class="faq-icon">+</span>
+  </div>
+  <div class="faq-answer">
+    Dubai is currently experiencing a dynamic growth phase. The property market has shown consistent appreciation across key segments — from luxury waterfronts to affordable suburbs. High rental yields (typically 6%–10%), zero property tax, and world-class infrastructure are drawing investors from around the world. With Expo legacy projects, smart city development, and continued global migration, Dubai is not just a trend — it’s a long-term opportunity.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <span>2. Can foreigners legally own property in Dubai?</span>
+    <span class="faq-icon">+</span>
+  </div>
+  <div class="faq-answer">
+    Yes, foreigners can legally own property in designated freehold areas in Dubai. These areas allow full ownership with the same rights as UAE nationals, including selling, leasing, or inheriting the property.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <span>3. What are the different types of property ownership in Dubai?</span>
+    <span class="faq-icon">+</span>
+  </div>
+  <div class="faq-answer">
+    The two main types are Freehold and Leasehold. Freehold allows full ownership of the property and the land. Leasehold typically gives the right to occupy or lease the property for up to 99 years.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <span>4. How much is the minimum investment required to buy property in Dubai?</span>
+    <span class="faq-icon">+</span>
+  </div>
+  <div class="faq-answer">
+    While prices vary, you can enter the market with as little as AED 500,000 for studios or small apartments in emerging areas. Premium projects will require higher budgets.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <span>5. What kind of returns can I expect on my investment?</span>
+    <span class="faq-icon">+</span>
+  </div>
+  <div class="faq-answer">
+    Rental yields in Dubai are among the highest globally — typically ranging from 6% to 10%. Capital appreciation is also strong in growth areas.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <span>6. Are there any taxes on property income or capital gains?</span>
+    <span class="faq-icon">+</span>
+  </div>
+  <div class="faq-answer">
+    Dubai imposes zero property tax, no capital gains tax, and no inheritance tax. There are standard transaction fees during purchase and sale, but no recurring annual taxes on property income.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <span>7. How do I choose the right location in Dubai for investment?</span>
+    <span class="faq-icon">+</span>
+  </div>
+  <div class="faq-answer">
+    It depends on your investment goals. Areas like Downtown and Palm Jumeirah are ideal for luxury and tourism-focused rental income. Suburbs like JVC or Dubai South offer affordable entry and strong yield potential.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <span>8. What is off-plan property and is it safe to invest in?</span>
+    <span class="faq-icon">+</span>
+  </div>
+  <div class="faq-answer">
+    Off-plan means buying a property before it’s built. It’s safe when buying from reputable developers approved by the Dubai Land Department. These projects often offer flexible payment plans and capital appreciation potential.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <span>9. What is the process of buying a property in Dubai?</span>
+    <span class="faq-icon">+</span>
+  </div>
+  <div class="faq-answer">
+    The process typically includes selecting the property, signing a Sales and Purchase Agreement (SPA), paying the deposit (usually 10%), and registering with the Dubai Land Department. The process is transparent and streamlined.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <span>10. Can I get a residence visa if I buy property in Dubai?</span>
+    <span class="faq-icon">+</span>
+  </div>
+  <div class="faq-answer">
+    Yes, investors can obtain a renewable residence visa if they purchase property worth AED 750,000 or more. A 10-year Golden Visa is available for investments of AED 2 million or more under certain conditions.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <span>11. How is the real estate market regulated in Dubai?</span>
+    <span class="faq-icon">+</span>
+  </div>
+  <div class="faq-answer">
+    The Dubai Land Department and RERA (Real Estate Regulatory Agency) strictly regulate the market. These bodies ensure transparency, protect buyer rights, and oversee developers and brokers.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <span>12. What is the difference between ready and off-plan property?</span>
+    <span class="faq-icon">+</span>
+  </div>
+  <div class="faq-answer">
+    Ready properties are completed and available for immediate move-in or rental. Off-plan properties are under construction, usually offering lower entry prices and payment flexibility.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <span>13. What are the typical fees involved in a property transaction?</span>
+    <span class="faq-icon">+</span>
+  </div>
+  <div class="faq-answer">
+    Buyers typically pay a 4% transfer fee to the DLD, a 2% broker fee (if applicable), and a small fee for registration and trustee services. Developers may also charge service fees for community maintenance.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <span>14. Can I rent out my property if I don’t live in Dubai?</span>
+    <span class="faq-icon">+</span>
+  </div>
+  <div class="faq-answer">
+    Absolutely. Many investors rent out their properties via long-term leases or short-term holiday rentals. Property management companies can handle everything on your behalf.
+  </div>
+</div>
+
+<div class="faq-item">
+  <div class="faq-question">
+    <span>15. How do I ensure I’m dealing with a trustworthy agent or developer?</span>
+    <span class="faq-icon">+</span>
+  </div>
+  <div class="faq-answer">
+    Always check if the agent or developer is registered with RERA. Ask for their license number and verify it through official DLD channels. Reputable firms will never hesitate to provide transparent documentation.
+  </div>
+</div>
+   
+  </main>
 
   <script>
-    const headers = document.querySelectorAll(".accordion-header");
-    headers.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const active = document.querySelector(".accordion-item.active");
-        if (active && active !== btn.parentElement) {
-          active.classList.remove("active");
-        }
-        btn.parentElement.classList.toggle("active");
+    document.querySelectorAll(".faq-item").forEach(item => {
+      item.addEventListener("click", () => {
+        item.classList.toggle("active");
       });
     });
   </script>
-
 </body>
 </html>
