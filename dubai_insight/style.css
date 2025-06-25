@@ -178,3 +178,26 @@ form textarea {
   opacity: 1;
   transform: translateY(0);
 }
+
+.subheading {
+  font-size: 1.1rem;
+  color: #888;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  width: 80%;
+  margin: 4rem auto;
+}
+
+.form-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  padding: 20px;
+}
+
