@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
+
 <body class="bg-[#f9f9f6] text-[#1a1a1a] font-sans">
 
   <!-- Back to Blog Button -->
@@ -32,21 +33,21 @@
   <section class="py-20 px-4 fade-up bg-white">
     <h2 class="text-4xl text-center font-bold mb-12">Who We Are</h2>
     <div class="max-w-5xl mx-auto text-lg space-y-12">
-      <div>
+      <div class="text-center">
         <h3 class="text-2xl font-semibold mb-4">Strategic Consultants for International Real Estate</h3>
-        <p>At MsquareCo, we go beyond the typical transaction. We’re here to guide, educate, and empower you in making informed, long-term property investment decisions — especially in the thriving landscape of Dubai.</p>
+        <p class="text-left">At MsquareCo, we go beyond the typical transaction. We’re here to guide, educate, and empower you in making informed, long-term property investment decisions — especially in the thriving landscape of Dubai.</p>
       </div>
-      <div>
+      <div class="text-center">
         <h3 class="text-2xl font-semibold mb-4">Deep Dubai Market Knowledge</h3>
-        <p>We understand what’s trending — and what’s not. With hands-on insight into developer offerings, regulatory frameworks, rental trends, and neighborhood dynamics, we help our clients navigate confidently.</p>
+        <p class="text-left">We understand what’s trending — and what’s not. With hands-on insight into developer offerings, regulatory frameworks, rental trends, and neighborhood dynamics, we help our clients navigate confidently.</p>
       </div>
-      <div>
+      <div class="text-center">
         <h3 class="text-2xl font-semibold mb-4">What We Believe</h3>
-        <p>Property is not a product — it’s a plan. Every investor is different, and so should be the strategy. Whether you're seeking yield, residency, or long-term growth, we tailor every conversation around <em>your</em> goal.</p>
+        <p class="text-left">Property is not a product — it’s a plan. Every investor is different, and so should be the strategy. Whether you're seeking yield, residency, or long-term growth, we tailor every conversation around <em>your</em> goal.</p>
       </div>
-      <div>
+      <div class="text-center">
         <h3 class="text-2xl font-semibold mb-4">Why It Matters</h3>
-        <p>We focus on awareness, not pushy sales. Our clients trust us not just to show listings, but to decode the entire market — from legalities to liquidity — so that decisions are made with both heart and head aligned.</p>
+        <p class="text-left">We focus on awareness, not pushy sales. Our clients trust us not just to show listings, but to decode the entire market — from legalities to liquidity — so that decisions are made with both heart and head aligned.</p>
       </div>
     </div>
   </section>
@@ -80,11 +81,17 @@
     <p class="mt-4">&copy; 2025 MsquareCo. All rights reserved.</p>
   </footer>
 
-  <!-- Back to Top -->
+  <!-- ↑ Back to Top -->
   <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
     class="fixed bottom-6 right-6 bg-[#2e2e2e] text-white px-4 py-2 rounded-full shadow-lg hover:bg-[#444] z-50">
     ↑ Top
   </button>
+
+  <!-- LinkedIn Subscribe Button (Hidden Until Scroll) -->
+  <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7343337585416503297"
+     class="linkedin-float-btn hidden" target="_blank" aria-label="Subscribe on LinkedIn">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+  </a>
 
   <!-- Scroll Reveal Script -->
   <script>
@@ -121,6 +128,18 @@
       }).catch(() => {
         alert("There was a problem submitting the form.");
       });
+    });
+  </script>
+
+  <!-- Show LinkedIn Button on Scroll -->
+  <script>
+    const linkedInBtn = document.querySelector('.linkedin-float-btn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        linkedInBtn.classList.remove('hidden');
+      } else {
+        linkedInBtn.classList.add('hidden');
+      }
     });
   </script>
 
