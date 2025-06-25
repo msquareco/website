@@ -1,15 +1,100 @@
-/* Fade-up Animation */
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* =============== BASE =============== */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f6;
+  color: #2e2e2e;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
 }
 
-/* Buttons */
+a {
+  color: #50C878;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+a:hover {
+  color: #2e2e2e;
+}
+
+/* =============== TYPOGRAPHY =============== */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #2e2e2e;
+  margin-top: 40px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #888;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 40px;
+  border-bottom: 2px solid #d4af37;
+  display: inline-block;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+section p {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  font-size: 1rem;
+  color: #444;
+  text-align: left;
+  line-height: 1.7;
+}
+
+ul {
+  padding-left: 20px;
+}
+ul li {
+  margin-bottom: 10px;
+}
+
+/* =============== LAYOUT =============== */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 40px 0 20px;
+  text-align: center;
+}
+
+section.content {
+  padding-bottom: 60px;
+}
+
+/* =============== FOOTER =============== */
+footer {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}
+
+/* =============== BUTTONS =============== */
 .cta-button {
   background-color: #f3c77b;
   color: #2e2e2e;
@@ -22,6 +107,7 @@
 .cta-button:hover {
   background-color: #e2b95f;
 }
+
 .cta-button-outline {
   border: 2px solid #2e2e2e;
   color: #2e2e2e;
@@ -36,7 +122,7 @@
   color: #fff;
 }
 
-/* Form Fields */
+/* =============== FORM =============== */
 form input,
 form textarea {
   font-family: inherit;
@@ -46,22 +132,16 @@ form textarea {
   background-color: #fff;
 }
 
-/* Section Typography */
-section h2,
-section h3 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-section p {
-  text-align: left;
-  max-width: 720px;
-  margin: 0 auto 2rem;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #444;
+/* Optional: Form card box */
+.form-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  padding: 20px;
+  margin-top: 30px;
 }
 
-/* LinkedIn Floating Button */
+/* =============== FLOATING BUTTONS =============== */
 .linkedin-float-btn {
   position: fixed;
   bottom: 80px;
@@ -86,4 +166,15 @@ section p {
 }
 .linkedin-float-btn.hidden {
   display: none;
+}
+
+/* =============== ANIMATIONS =============== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
