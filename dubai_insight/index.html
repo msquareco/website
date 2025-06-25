@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="../style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
-
 <body class="bg-[#f9f9f6] text-[#1a1a1a] font-sans">
 
   <!-- Back to Blog Button -->
@@ -31,23 +30,23 @@
 
   <!-- Who We Are Section -->
   <section class="py-20 px-4 fade-up bg-white">
-    <h2 class="text-4xl text-center font-bold mb-12">Who We Are</h2>
+    <h2 class="text-4xl font-bold mb-12 text-center">Who We Are</h2>
     <div class="max-w-5xl mx-auto text-lg space-y-12">
-      <div class="text-center">
-        <h3 class="text-2xl font-semibold mb-4">Strategic Consultants for International Real Estate</h3>
-        <p class="text-left">At MsquareCo, we go beyond the typical transaction. We’re here to guide, educate, and empower you in making informed, long-term property investment decisions — especially in the thriving landscape of Dubai.</p>
+      <div>
+        <h3 class="text-2xl font-semibold mb-4 text-center">Strategic Consultants for International Real Estate</h3>
+        <p>At MsquareCo, we go beyond the typical transaction. We’re here to guide, educate, and empower you in making informed, long-term property investment decisions — especially in the thriving landscape of Dubai.</p>
       </div>
-      <div class="text-center">
-        <h3 class="text-2xl font-semibold mb-4">Deep Dubai Market Knowledge</h3>
-        <p class="text-left">We understand what’s trending — and what’s not. With hands-on insight into developer offerings, regulatory frameworks, rental trends, and neighborhood dynamics, we help our clients navigate confidently.</p>
+      <div>
+        <h3 class="text-2xl font-semibold mb-4 text-center">Deep Dubai Market Knowledge</h3>
+        <p>We understand what’s trending — and what’s not. With hands-on insight into developer offerings, regulatory frameworks, rental trends, and neighborhood dynamics, we help our clients navigate confidently.</p>
       </div>
-      <div class="text-center">
-        <h3 class="text-2xl font-semibold mb-4">What We Believe</h3>
-        <p class="text-left">Property is not a product — it’s a plan. Every investor is different, and so should be the strategy. Whether you're seeking yield, residency, or long-term growth, we tailor every conversation around <em>your</em> goal.</p>
+      <div>
+        <h3 class="text-2xl font-semibold mb-4 text-center">What We Believe</h3>
+        <p>Property is not a product — it’s a plan. Every investor is different, and so should be the strategy. Whether you're seeking yield, residency, or long-term growth, we tailor every conversation around <em>your</em> goal.</p>
       </div>
-      <div class="text-center">
-        <h3 class="text-2xl font-semibold mb-4">Why It Matters</h3>
-        <p class="text-left">We focus on awareness, not pushy sales. Our clients trust us not just to show listings, but to decode the entire market — from legalities to liquidity — so that decisions are made with both heart and head aligned.</p>
+      <div>
+        <h3 class="text-2xl font-semibold mb-4 text-center">Why It Matters</h3>
+        <p>We focus on awareness, not pushy sales. Our clients trust us not just to show listings, but to decode the entire market — from legalities to liquidity — so that decisions are made with both heart and head aligned.</p>
       </div>
     </div>
   </section>
@@ -73,12 +72,12 @@
 
   <!-- Footer -->
   <footer class="text-center text-sm py-10 fade-up">
-    <p>Contact: info@msquareco.com</p>
-    <p>
+    <p class="mb-2">Contact: info@msquareco.com</p>
+    <p class="mb-2">
       <a href="https://wa.me/971567570905" class="underline">Talk on WhatsApp</a> |
       <a href="https://instagram.com/theglobalpartner" class="underline">Follow on Instagram</a>
     </p>
-    <p class="mt-4">&copy; 2025 MsquareCo. All rights reserved.</p>
+    <p class="text-gray-500 mt-4">&copy; 2025 MsquareCo. All rights reserved.</p>
   </footer>
 
   <!-- ↑ Back to Top -->
@@ -87,13 +86,13 @@
     ↑ Top
   </button>
 
-  <!-- LinkedIn Subscribe Button (Hidden Until Scroll) -->
+  <!-- LinkedIn Subscribe Button -->
   <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7343337585416503297"
-     class="linkedin-float-btn hidden" target="_blank" aria-label="Subscribe on LinkedIn">
+     class="linkedin-float-btn hidden" target="_blank" aria-label="Subscribe on LinkedIn" title="Subscribe on LinkedIn">
     <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
   </a>
 
-  <!-- Scroll Reveal Script -->
+  <!-- Scroll Reveal -->
   <script>
     const fadeUps = document.querySelectorAll('.fade-up');
     const observer = new IntersectionObserver((entries) => {
@@ -104,7 +103,6 @@
         }
       });
     }, { threshold: 0.1 });
-
     fadeUps.forEach(el => observer.observe(el));
   </script>
 
@@ -131,7 +129,7 @@
     });
   </script>
 
-  <!-- Show LinkedIn Button on Scroll -->
+  <!-- LinkedIn Show-on-Scroll -->
   <script>
     const linkedInBtn = document.querySelector('.linkedin-float-btn');
     window.addEventListener('scroll', () => {
