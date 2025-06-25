@@ -37,7 +37,8 @@
 }
 
 /* Form */
-form input, form textarea {
+form input,
+form textarea {
   font-family: inherit;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -45,10 +46,10 @@ form input, form textarea {
   background-color: #fff;
 }
 
-/* Floating LinkedIn Button */
+/* LinkedIn Floating Button */
 .linkedin-float-btn {
   position: fixed;
-  bottom: 80px; /* sits above '↑ Top' button */
+  bottom: 80px; /* slightly above the back-to-top button */
   right: 20px;
   z-index: 9999;
   width: 48px;
@@ -61,17 +62,28 @@ form input, form textarea {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: background 0.3s ease;
 }
-
 .linkedin-float-btn:hover {
   background-color: #004182;
 }
-
 .linkedin-float-btn img {
   width: 24px;
   height: 24px;
 }
-
 .linkedin-float-btn.hidden {
   display: none;
 }
 
+/* Optional: Centered section adjustments (for "Who We Are") */
+section h2 {
+  text-align: center;
+}
+section h3 {
+  text-align: center;
+}
+section p {
+  text-align: left;
+  max-width: 720px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  color: #444;
+}
