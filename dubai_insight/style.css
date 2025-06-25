@@ -46,29 +46,32 @@ form textarea {
   background-color: #fff;
 }
 
-/* LinkedIn Floating Button */
+/* Refined LinkedIn Floating Button */
 .linkedin-float-btn {
   position: fixed;
-  bottom: 80px; /* slightly above the back-to-top button */
+  bottom: 80px;
   right: 20px;
   z-index: 9999;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   background-color: #0A66C2;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   transition: background 0.3s ease;
 }
+
 .linkedin-float-btn:hover {
   background-color: #004182;
 }
+
 .linkedin-float-btn img {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
 }
+
 .linkedin-float-btn.hidden {
   display: none;
 }
