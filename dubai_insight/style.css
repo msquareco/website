@@ -36,7 +36,7 @@
   color: #fff;
 }
 
-/* Form */
+/* Form Fields */
 form input,
 form textarea {
   font-family: inherit;
@@ -46,64 +46,19 @@ form textarea {
   background-color: #fff;
 }
 
-/* Refined LinkedIn Floating Button */
-.linkedin-float-btn {
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  z-index: 9999;
-  width: 40px;
-  height: 40px;
-  background-color: #0A66C2;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-  transition: background 0.3s ease;
-}
-
-.linkedin-float-btn:hover {
-  background-color: #004182;
-}
-
-.linkedin-float-btn img {
-  width: 18px;
-  height: 18px;
-}
-
-.linkedin-float-btn.hidden {
-  display: none;
-}
-
-/* Optional: Centered section adjustments (for "Who We Are") */
-section h2 {
-  text-align: center;
-}
+/* Section Typography */
+section h2,
 section h3 {
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 section p {
   text-align: left;
-  max-width: 720px;
-  margin: 0 auto 40px;
-  font-size: 1rem;
-  color: #444;
-}
-/* Section Text Styling */
-section p {
   max-width: 720px;
   margin: 0 auto 2rem;
   font-size: 1rem;
   line-height: 1.7;
   color: #444;
-  text-align: left;
-}
-
-section h2,
-section h3 {
-  text-align: center;
-  margin-bottom: 1.5rem;
 }
 
 /* LinkedIn Floating Button */
