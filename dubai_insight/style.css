@@ -1,32 +1,6 @@
-.section {
-  padding: 4rem 1rem;
-}
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  .cta-button,
-  .cta-button-outline {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  .linkedin-float-btn {
-    bottom: 60px;
-    right: 16px;
-    width: 32px;
-    height: 32px;
-  }
-
-  .linkedin-float-btn img {
-    width: 16px;
-    height: 16px;
-  }
-}
-
+/* =====================
+   Typography & Layout
+===================== */
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f9f9f6;
@@ -47,14 +21,6 @@ h1 {
   margin-bottom: 0;
 }
 
-.subheading {
-  font-size: 1.1rem;
-  color: #888;
-  font-style: italic;
-  font-weight: 400;
-  margin-bottom: 1.5rem;
-}
-
 h2 {
   font-size: 1.5rem;
   font-weight: normal;
@@ -65,10 +31,17 @@ h2 {
 
 h3 {
   font-size: 1.4rem;
-  margin-top: 40px;
   border-bottom: 2px solid #d4af37;
   display: inline-block;
   padding-bottom: 5px;
+}
+
+.subheading {
+  font-size: 1.1rem;
+  color: #888;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
 }
 
 a {
@@ -76,22 +49,21 @@ a {
   text-decoration: none;
   transition: 0.3s ease;
 }
-
 a:hover {
   color: #2e2e2e;
 }
 
+/* =====================
+   Layout Containers
+===================== */
 .container {
   max-width: 1140px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding: 4rem 1rem;
 }
 
 .section-divider {
@@ -101,7 +73,17 @@ a:hover {
   margin: 4rem auto;
 }
 
-/* Paragraphs */
+section {
+  padding: 60px 20px;
+  margin-bottom: 40px;
+  background: none;
+  backdrop-filter: none;
+  border-radius: 0;
+}
+
+/* =====================
+   Text Elements
+===================== */
 section p {
   max-width: 720px;
   margin: 0 auto 2rem;
@@ -111,7 +93,9 @@ section p {
   text-align: left;
 }
 
-/* Buttons */
+/* =====================
+   Buttons
+===================== */
 .cta-button {
   background-color: #f3c77b;
   color: #2e2e2e;
@@ -139,7 +123,9 @@ section p {
   color: #fff;
 }
 
-/* Form */
+/* =====================
+   Form Styles
+===================== */
 form input,
 form textarea {
   font-family: inherit;
@@ -152,11 +138,13 @@ form textarea {
 .form-container {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
   padding: 20px;
 }
 
-/* Floating LinkedIn Button */
+/* =====================
+   Floating LinkedIn Button
+===================== */
 .linkedin-float-btn {
   position: fixed;
   bottom: 80px;
@@ -185,7 +173,9 @@ form textarea {
   display: none;
 }
 
-/* Animation */
+/* =====================
+   Animations
+===================== */
 .fade-up {
   opacity: 0;
   transform: translateY(40px);
@@ -196,11 +186,9 @@ form textarea {
   transform: translateY(0);
 }
 
-section {
-  padding: 60px 20px;
-  margin-bottom: 40px;
-}
-
+/* =====================
+   Utilities
+===================== */
 .back-link {
   position: absolute;
   top: 20px;
@@ -214,13 +202,7 @@ section {
   text-decoration: underline;
 }
 
-.bg-opacity {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: none;
-  border-radius: 8px;
-}
-
-/* Social Icon Row */
+/* Social Icons */
 .footer-icons img {
   width: 28px;
   margin: 0 10px;
@@ -231,28 +213,38 @@ section {
   transform: scale(1.1);
 }
 
-/* Mobile Optimizations */
+/* =====================
+   Responsive
+===================== */
 @media (max-width: 768px) {
-  h1 { font-size: 2rem; }
-  .cta-button, .cta-button-outline {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .cta-button,
+  .cta-button-outline {
     display: block;
     width: 100%;
     text-align: center;
     margin-bottom: 1rem;
   }
+
   .linkedin-float-btn {
     bottom: 60px;
     right: 16px;
     width: 32px;
     height: 32px;
   }
+
   .linkedin-float-btn img {
     width: 16px;
     height: 16px;
   }
 }
 
-
+/* =====================
+   3D Background Layer
+===================== */
 body::before {
   content: "";
   position: fixed;
@@ -266,13 +258,4 @@ body::before {
   filter: blur(6px) brightness(0.55);
   z-index: -1;
   opacity: 0.5;
-}
-
-
-section {
-  padding: 60px 20px;
-  margin-bottom: 40px;
-  background: none;
-  backdrop-filter: none;
-  border-radius: 0;
 }
