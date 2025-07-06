@@ -4,13 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dubai Insight | MsquareCo</title>
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="./style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: url('./assets/background_website.png') no-repeat center top;
+      background-size: cover;
+      background-attachment: fixed;
+      background-color: #f9f9f6;
+      font-family: 'Inter', sans-serif;
+      color: #2e2e2e;
+      line-height: 1.7;
+    }
+  </style>
 </head>
 <body>
-  
-  <!-- Back to Blog Button -->
-  <a href="../index.html#my-blog" class="absolute top-6 left-6 text-sm text-[#444] hover:underline z-50 fade-up">← Home</a>
 
   <!-- Header -->
   <header class="section fade-up bg-[#f6f3ef]">
@@ -21,7 +30,7 @@
   </header>
 
   <!-- Hero -->
-  <section class="section fade-up bg-white">
+  <section class="section fade-up bg-white bg-opacity">
     <div class="container text-center">
       <h2 class="text-3xl md:text-4xl font-serif mb-4">Discover Smarter Investment in Dubai</h2>
       <p class="subheading italic">Tailored insights. Strategic opportunities. Trusted advisors.</p>
@@ -32,11 +41,10 @@
     </div>
   </section>
 
-  <!-- Divider -->
   <hr class="section-divider" />
 
-  <!-- Who We Are Section -->
-  <section class="section fade-up bg-[#f8f5f0]">
+  <!-- Who We Are -->
+  <section class="section fade-up bg-[#f8f5f0] bg-opacity">
     <div class="container text-center">
       <h2 class="text-4xl font-bold mb-2">Who We Are</h2>
       <p class="subheading">We’re more than agents — we’re investment allies.</p>
@@ -61,11 +69,10 @@
     </div>
   </section>
 
-  <!-- Divider -->
   <hr class="section-divider" />
 
-  <!-- Contact Section -->
-  <section class="section fade-up bg-white">
+  <!-- Contact -->
+  <section class="section fade-up bg-white bg-opacity">
     <div class="container text-center">
       <h2 class="text-2xl md:text-3xl mb-2">Prefer email?</h2>
       <p class="subheading mb-6">Send us a quick note, we’ll respond within 24 hours.</p>
@@ -99,10 +106,10 @@
     ↑ Top
   </button>
 
-  <!-- LinkedIn Subscribe Button -->
+  <!-- LinkedIn Floating Subscribe Button -->
   <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7343337585416503297"
      class="linkedin-float-btn hidden" target="_blank" aria-label="Subscribe on LinkedIn" title="Subscribe on LinkedIn">
-    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+    <img src="./icons/linkedin.png" alt="LinkedIn" />
   </a>
 
   <!-- Scroll Reveal -->
@@ -142,7 +149,7 @@
     });
   </script>
 
-  <!-- LinkedIn Show-on-Scroll -->
+  <!-- LinkedIn Button Reveal -->
   <script>
     const linkedInBtn = document.querySelector('.linkedin-float-btn');
     window.addEventListener('scroll', () => {
@@ -153,15 +160,6 @@
       }
     });
   </script>
-body {
-  background: url('./assets/background_website.png') no-repeat center top;
-  background-size: cover;
-  background-attachment: fixed;
-  background-color: #f9f9f6; /* fallback */
-  font-family: 'Inter', sans-serif;
-  color: #2e2e2e;
-  line-height: 1.7;
-}
 
 </body>
 </html>
