@@ -95,12 +95,37 @@ main p {
   color: #fff;
 }
 
-/* Footer (Optional) */
+/* =====================
+   Footer
+===================== */
 footer {
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
+  color: #555;
+  background-color: #f0f0f0;
   padding: 40px 20px;
-  color: #999;
+  line-height: 1.6;
+}
+
+footer p {
+  margin: 8px 0;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.footer-icons img {
+  width: 28px;
+  vertical-align: middle;
+  transition: 0.3s ease;
+}
+
+.footer-icons a:hover img {
+  transform: scale(1.1);
 }
 
 /* Blog Section */
