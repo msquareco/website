@@ -197,14 +197,9 @@ form textarea {
 }
 
 section {
-  background: rgba(255, 255, 255, 0.92);
   padding: 60px 20px;
   margin-bottom: 40px;
-  border-radius: 8px;
-  backdrop-filter: blur(3px);
 }
-
-
 
 .back-link {
   position: absolute;
@@ -255,4 +250,20 @@ section {
     width: 16px;
     height: 16px;
   }
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('./assets/3d_background.jpg') center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: blur(6px) brightness(0.55);
+  z-index: -1;
+  opacity: 0.5;
 }
