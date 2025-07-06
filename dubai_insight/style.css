@@ -14,6 +14,7 @@ h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   color: #2e2e2e;
   margin-top: 40px;
+  text-align: center;
 }
 
 h1 {
@@ -25,7 +26,6 @@ h2 {
   font-size: 1.5rem;
   font-weight: normal;
   color: #3a3a3a;
-  text-align: center;
   margin-bottom: 1.5rem;
 }
 
@@ -34,6 +34,7 @@ h3 {
   border-bottom: 2px solid #d4af37;
   display: inline-block;
   padding-bottom: 5px;
+  margin-bottom: 1rem;
 }
 
 .subheading {
@@ -44,11 +45,16 @@ h3 {
   margin-bottom: 1.5rem;
 }
 
+p {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
 a {
   color: #2e2e2e;
   text-decoration: none;
   transition: 0.3s ease;
 }
+
 a:hover {
   color: #2e2e2e;
 }
@@ -62,8 +68,13 @@ a:hover {
   padding: 0 1rem;
 }
 
+section,
 .section {
-  padding: 4rem 1rem;
+  padding: 60px 20px;
+  margin-bottom: 40px;
+  background: none;
+  backdrop-filter: none;
+  border-radius: 0;
 }
 
 .section-divider {
@@ -73,16 +84,8 @@ a:hover {
   margin: 4rem auto;
 }
 
-section {
-  padding: 60px 20px;
-  margin-bottom: 40px;
-  background: none;
-  backdrop-filter: none;
-  border-radius: 0;
-}
-
 /* =====================
-   Text Elements
+   Text Blocks
 ===================== */
 section p {
   max-width: 720px;
@@ -91,6 +94,10 @@ section p {
   line-height: 1.7;
   color: #444;
   text-align: left;
+}
+
+.content-block {
+  margin-bottom: 3rem;
 }
 
 /* =====================
@@ -105,6 +112,7 @@ section p {
   transition: background-color 0.3s;
   text-decoration: none;
 }
+
 .cta-button:hover {
   background-color: #e2b95f;
 }
@@ -118,13 +126,22 @@ section p {
   transition: background-color 0.3s, color 0.3s;
   text-decoration: none;
 }
+
 .cta-button-outline:hover {
   background-color: #2e2e2e;
   color: #fff;
 }
 
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
 /* =====================
-   Form Styles
+   Form Styling
 ===================== */
 form input,
 form textarea {
@@ -161,14 +178,17 @@ form textarea {
   transition: background 0.3s ease;
   overflow: hidden;
 }
+
 .linkedin-float-btn:hover {
   background-color: #004182;
 }
+
 .linkedin-float-btn img {
   width: 18px !important;
   height: 18px !important;
   object-fit: contain;
 }
+
 .linkedin-float-btn.hidden {
   display: none;
 }
@@ -181,79 +201,14 @@ form textarea {
   transform: translateY(40px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
+
 .fade-up.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* =====================
-   Utilities
-===================== */
-.back-link {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 0.9rem;
-  color: #444;
-  text-decoration: none;
-  z-index: 999;
-}
-.back-link:hover {
-  text-decoration: underline;
-}
-
-/* Social Icons */
-.footer-icons img {
-  width: 28px;
-  margin: 0 10px;
-  vertical-align: middle;
-  transition: 0.3s ease;
-}
-.footer-icons a:hover img {
-  transform: scale(1.1);
-}
-
-/* =====================
-   Responsive
-===================== */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  .cta-button,
-  .cta-button-outline {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 0 0.5rem;
-  }
-
-  .linkedin-float-btn {
-    bottom: 60px;
-    right: 16px;
-    width: 32px;
-    height: 32px;
-  }
-
-  .linkedin-float-btn img {
-    width: 16px;
-    height: 16px;
-  }
-}
-
-.hero-cta {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-
-
-/* =====================
-   3D Background Layer
+   Background Layer
 ===================== */
 body::before {
   content: "";
@@ -270,8 +225,9 @@ body::before {
   opacity: 0.75;
 }
 
-/* Footer allignment  */
-
+/* =====================
+   Footer
+===================== */
 footer {
   text-align: center;
   font-size: 0.9rem;
@@ -286,7 +242,64 @@ footer p {
 }
 
 .footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
   margin-top: 12px;
 }
 
+.footer-icons img {
+  width: 28px;
+  vertical-align: middle;
+  transition: 0.3s ease;
+}
 
+.footer-icons a:hover img {
+  transform: scale(1.1);
+}
+
+/* =====================
+   Back Link Utility
+===================== */
+.back-link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 0.9rem;
+  color: #444;
+  text-decoration: none;
+  z-index: 999;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   Responsive
+===================== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .cta-button,
+  .cta-button-outline {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 1rem;
+  }
+
+  .linkedin-float-btn {
+    bottom: 60px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .linkedin-float-btn img {
+    width: 16px;
+    height: 16px;
+  }
+}
