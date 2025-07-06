@@ -226,7 +226,7 @@ form textarea {
     display: block;
     width: 100%;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0 0.5rem;
   }
 
   .linkedin-float-btn {
@@ -241,6 +241,16 @@ form textarea {
     height: 16px;
   }
 }
+
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+
 
 /* =====================
    3D Background Layer
@@ -259,3 +269,24 @@ body::before {
   z-index: -1;
   opacity: 0.75;
 }
+
+/* Footer allignment  */
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+  background-color: #f0f0f0;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+footer p {
+  margin: 8px 0;
+}
+
+.footer-icons {
+  margin-top: 12px;
+}
+
+
