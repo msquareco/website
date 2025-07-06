@@ -24,6 +24,24 @@ header h1 {
   margin: 0;
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.header-social a img {
+  width: 22px;
+  margin-right: 12px;
+  transition: transform 0.3s ease;
+  vertical-align: middle;
+}
+.header-social a:hover img {
+  transform: scale(1.1);
+}
+
+
 /* Main Section */
 main {
   text-align: center;
