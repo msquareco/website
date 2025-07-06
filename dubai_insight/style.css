@@ -24,7 +24,7 @@ h1 {
 h2 {
   font-size: 1.5rem;
   font-weight: normal;
-  color: #888;
+  color: #3a3a3a;
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -38,14 +38,14 @@ h3 {
 
 .subheading {
   font-size: 1.1rem;
-  color: #888;
+  color: #3a3a3a;
   font-style: italic;
   font-weight: 400;
   margin-bottom: 1.5rem;
 }
 
 a {
-  color: #50C878;
+  color: #2e2e2e;
   text-decoration: none;
   transition: 0.3s ease;
 }
@@ -255,7 +255,7 @@ body::before {
   background: url('./assets/3d_background.jpg') center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  filter: blur(6px) brightness(0.55);
+  filter: blur(3px) brightness(0.8);
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.75;
 }
