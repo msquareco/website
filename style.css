@@ -239,3 +239,53 @@ footer p {
         background-color: #2f2f2f;
         font-family: "SF Pro Text", Helvetica, sans-serif;
       }
+/* === Privacy Policy Page Styles === */
+.privacy-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: 'Georgia', serif;
+  color: #222;
+  background-color: #fff;
+  line-height: 1.7;
+}
+
+.privacy-container h2 {
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+  color: #444;
+}
+
+.privacy-container h3 {
+  font-size: 1.2rem;
+  margin-top: 1.8rem;
+  color: #333;
+}
+
+.privacy-container p {
+  margin: 1rem 0;
+}
+
+.privacy-container ul {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.privacy-container li {
+  margin-bottom: 0.5rem;
+}
+
+.privacy-container a {
+  color: #006699;
+  text-decoration: none;
+}
+
+.privacy-container a:hover {
+  text-decoration: underline;
+}
+
+.privacy-container strong {
+  font-weight: 600;
+}
